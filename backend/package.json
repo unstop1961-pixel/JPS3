@@ -5,13 +5,20 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["museum", "india", "cultural", "heritage"],
+  "author": "Digital Museum Guide Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   },
   "dependencies": {
     "express": "^4.18.2",
     "cors": "^2.8.5",
     "body-parser": "^1.20.2"
   },
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {}
 }

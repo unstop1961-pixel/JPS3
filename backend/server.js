@@ -4,9 +4,11 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const crypto = require('crypto');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Middleware
 app.use(cors());
@@ -55,11 +57,29 @@ function saveUserData() {
   fs.writeFileSync(userDataFile, JSON.stringify(users, null, 2));
 }
 
+// Password hashing helper (simple SHA-256 based - use bcryptjs for production)
+function hashPassword(password) {
+  return crypto.createHash('sha256').update(password + 'museum-guide-salt').digest('hex');
+}
+
 // Routes
 
 // 1. Authentication Routes
 app.post('/api/auth/signup', (req, res) => {
   const { username, password } = req.body;
+
+  // Validation
+  if (!username || !password) {
+    return res.status(400).json({ message: 'Username and password required' });
+  }
+
+  if (username.length < 3) {
+    return res.status(400).json({ message: 'Username must be at least 3 characters' });
+  }
+
+  if (password.length < 6) {
+    return res.status(400).json({ message: 'Password must be at least 6 characters' });
+  }
 
   if (users[username]) {
     return res.status(400).json({ message: 'Username already exists' });
@@ -67,7 +87,7 @@ app.post('/api/auth/signup', (req, res) => {
 
   users[username] = {
     username,
-    password, // In production, should hash this
+    password: hashPassword(password), // Store hashed password
     createdAt: new Date(),
     wishlist: [],
     visitedLog: [],
@@ -82,8 +102,12 @@ app.post('/api/auth/signup', (req, res) => {
 app.post('/api/auth/login', (req, res) => {
   const { username, password } = req.body;
 
+  if (!username || !password) {
+    return res.status(400).json({ message: 'Username and password required' });
+  }
+
   const user = users[username];
-  if (!user || user.password !== password) {
+  if (!user || user.password !== hashPassword(password)) {
     return res.status(401).json({ message: 'Invalid username or password' });
   }
 
@@ -337,9 +361,12 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Start Server
 app.listen(PORT, () => {
+  const protocol = 'http';
+  const host = NODE_ENV === 'production' ? process.env.HOSTNAME || '0.0.0.0' : 'localhost';
   console.log(`\n╔════════════════════════════════════════════════════════════╗`);
   console.log(`║  Digital Museum Guide Server                             ║`);
-  console.log(`║  ✓ Running on http://localhost:${PORT}`);
+  console.log(`║  ✓ Environment: ${NODE_ENV.toUpperCase()}`);
+  console.log(`║  ✓ Running on ${protocol}://${host}:${PORT}`);
   console.log(`║  ✓ ${museums.length} museums loaded`);
   console.log(`║  ✓ ${quizzes.length} quiz questions loaded`);
   console.log(`║  ✓ Real-time APIs enabled (Wikipedia, Google Maps)      ║`);
