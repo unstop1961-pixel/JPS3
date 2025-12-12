@@ -10,27 +10,56 @@ let museums = [];
 let quizzes = [];
 let museumQuizzes = {};
 
-// Load data once
-try {
-  const museumsData = JSON.parse(fs.readFileSync(path.join(dataDir, 'museums.json'), 'utf8'));
-  museums = museumsData.museums || museumsData;
-} catch (err) {
-  console.error('Error loading museums:', err.message);
+// Helper functions to load data
+function loadMuseums() {
+  try {
+    const museumsPath = path.join(dataDir, 'museums.json');
+    if (!fs.existsSync(museumsPath)) {
+      console.error('Museums file not found at:', museumsPath);
+      return [];
+    }
+    const museumsData = JSON.parse(fs.readFileSync(museumsPath, 'utf8'));
+    return museumsData.museums || museumsData;
+  } catch (err) {
+    console.error('Error loading museums:', err.message);
+    return [];
+  }
 }
 
-try {
-  const quizzesData = JSON.parse(fs.readFileSync(path.join(dataDir, 'quiz.json'), 'utf8'));
-  quizzes = quizzesData.quizzes || quizzesData;
-} catch (err) {
-  console.error('Error loading quiz:', err.message);
+function loadQuizzes() {
+  try {
+    const quizzesPath = path.join(dataDir, 'quiz.json');
+    if (!fs.existsSync(quizzesPath)) {
+      console.error('Quiz file not found at:', quizzesPath);
+      return [];
+    }
+    const quizzesData = JSON.parse(fs.readFileSync(quizzesPath, 'utf8'));
+    return quizzesData.quizzes || quizzesData;
+  } catch (err) {
+    console.error('Error loading quizzes:', err.message);
+    return [];
+  }
 }
 
-try {
-  const museumQuizzesData = JSON.parse(fs.readFileSync(path.join(dataDir, 'museum-quiz.json'), 'utf8'));
-  museumQuizzes = museumQuizzesData.museumQuizzes || {};
-} catch (err) {
-  console.error('Error loading museum quizzes:', err.message);
+function loadMuseumQuizzes() {
+  try {
+    const museumQuizzesPath = path.join(dataDir, 'museum-quiz.json');
+    if (!fs.existsSync(museumQuizzesPath)) {
+      console.error('Museum quizzes file not found at:', museumQuizzesPath);
+      return {};
+    }
+    const museumQuizzesData = JSON.parse(fs.readFileSync(museumQuizzesPath, 'utf8'));
+    return museumQuizzesData.museumQuizzes || {};
+  } catch (err) {
+    console.error('Error loading museum quizzes:', err.message);
+    return {};
+  }
 }
+
+// Load data on startup
+museums = loadMuseums();
+quizzes = loadQuizzes();
+museumQuizzes = loadMuseumQuizzes();
 
 export default function handler(req, res) {
   res.setHeader('Access-Control-Allow-Credentials', 'true');
@@ -47,6 +76,7 @@ export default function handler(req, res) {
     message: 'Digital Museum Guide API',
     version: '1.0.0',
     museums: museums.length,
-    quizzes: quizzes.length
+    quizzes: quizzes.length,
+    museumQuizzes: Object.keys(museumQuizzes).length
   });
 }

@@ -8,12 +8,23 @@ const dataDir = path.join(__dirname, '../data');
 
 let museums = [];
 
-try {
-  const museumsData = JSON.parse(fs.readFileSync(path.join(dataDir, 'museums.json'), 'utf8'));
-  museums = museumsData.museums || museumsData;
-} catch (err) {
-  console.error('Error loading museums:', err.message);
+function loadMuseums() {
+  try {
+    const museumsPath = path.join(dataDir, 'museums.json');
+    if (!fs.existsSync(museumsPath)) {
+      console.error('Museums file not found at:', museumsPath);
+      return [];
+    }
+    const museumsData = JSON.parse(fs.readFileSync(museumsPath, 'utf8'));
+    return museumsData.museums || museumsData;
+  } catch (err) {
+    console.error('Error loading museums:', err.message);
+    return [];
+  }
 }
+
+// Load museums on startup
+museums = loadMuseums();
 
 export default function handler(req, res) {
   res.setHeader('Access-Control-Allow-Credentials', 'true');
@@ -26,5 +37,13 @@ export default function handler(req, res) {
     return;
   }
 
-  res.status(200).json(museums);
+  // If museums not loaded, try loading again
+  if (!museums || museums.length === 0) {
+    museums = loadMuseums();
+  }
+
+  res.status(200).json({
+    museums: museums,
+    count: museums.length
+  });
 }

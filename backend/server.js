@@ -10,9 +10,34 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
+// Production-ready middleware setup
+const corsOptions = {
+  origin: process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['http://localhost:3000', 'http://localhost:5173'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
+
+// Security headers
+app.use((req, res, next) => {
+  res.header('X-Content-Type-Options', 'nosniff');
+  res.header('X-Frame-Options', 'DENY');
+  res.header('X-XSS-Protection', '1; mode=block');
+  res.header('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  next();
+});
+
+// Request logging in production
+if (NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
+    next();
+  });
+}
 
 // Load data
 let museums = [];
@@ -61,6 +86,26 @@ function saveUserData() {
 function hashPassword(password) {
   return crypto.createHash('sha256').update(password + 'museum-guide-salt').digest('hex');
 }
+
+// Health check endpoints
+app.get('/health', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    timestamp: new Date().toISOString(),
+    environment: NODE_ENV,
+    uptime: process.uptime()
+  });
+});
+
+app.get('/api/status', (req, res) => {
+  res.json({ 
+    status: 'running',
+    museums: museums.length,
+    quizzes: quizzes.length,
+    users: Object.keys(users).length,
+    environment: NODE_ENV
+  });
+});
 
 // Routes
 
@@ -357,18 +402,70 @@ app.get('/api/museum-location/:name/:city', (req, res) => {
 });
 
 // Serve static files (must be after API routes)
+app.use('/data', express.static(path.join(__dirname, '../data')));
 app.use(express.static(path.join(__dirname, '../frontend')));
 
+// 404 handler
+app.use((req, res) => {
+  res.status(404).json({ 
+    error: 'Not Found', 
+    path: req.path,
+    method: req.method 
+  });
+});
+
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error('[ERROR]', err);
+  const statusCode = err.statusCode || 500;
+  const message = NODE_ENV === 'production' ? 'Internal Server Error' : err.message;
+  
+  res.status(statusCode).json({ 
+    error: message,
+    ...(NODE_ENV !== 'production' && { stack: err.stack })
+  });
+});
+
 // Start Server
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   const protocol = 'http';
   const host = NODE_ENV === 'production' ? process.env.HOSTNAME || '0.0.0.0' : 'localhost';
   console.log(`\n╔════════════════════════════════════════════════════════════╗`);
-  console.log(`║  Digital Museum Guide Server                             ║`);
-  console.log(`║  ✓ Environment: ${NODE_ENV.toUpperCase()}`);
-  console.log(`║  ✓ Running on ${protocol}://${host}:${PORT}`);
-  console.log(`║  ✓ ${museums.length} museums loaded`);
-  console.log(`║  ✓ ${quizzes.length} quiz questions loaded`);
+  console.log(`║  Digital Museum Guide Server - Production Ready          ║`);
+  console.log(`║  ✓ Environment: ${NODE_ENV.toUpperCase().padEnd(46)}║`);
+  console.log(`║  ✓ Running on ${protocol}://${host}:${PORT}`.padEnd(60) + `║`);
+  console.log(`║  ✓ ${museums.length} museums loaded`.padEnd(60) + `║`);
+  console.log(`║  ✓ ${quizzes.length} quiz questions loaded`.padEnd(60) + `║`);
   console.log(`║  ✓ Real-time APIs enabled (Wikipedia, Google Maps)      ║`);
+  console.log(`║  ✓ Health check: GET /health                            ║`);
+  console.log(`║  ✓ Status check: GET /api/status                        ║`);
   console.log(`╚════════════════════════════════════════════════════════════╝\n`);
+});
+
+// Graceful shutdown
+process.on('SIGTERM', () => {
+  console.log('SIGTERM received, shutting down gracefully...');
+  server.close(() => {
+    console.log('Server closed');
+    process.exit(0);
+  });
+});
+
+process.on('SIGINT', () => {
+  console.log('SIGINT received, shutting down gracefully...');
+  server.close(() => {
+    console.log('Server closed');
+    process.exit(0);
+  });
+});
+
+// Handle uncaught exceptions
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  process.exit(1);
 });
