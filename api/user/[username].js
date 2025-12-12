@@ -21,7 +21,15 @@ function loadUsers() {
 
 // Save users
 function saveUsers(users) {
-  fs.writeFileSync(userDataFile, JSON.stringify(users, null, 2));
+  try {
+    const dir = path.dirname(userDataFile);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    fs.writeFileSync(userDataFile, JSON.stringify(users, null, 2));
+  } catch (err) {
+    console.warn('Note: User data persistence requires database. Using client-side storage.');
+  }
 }
 
 export default function handler(req, res) {

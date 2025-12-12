@@ -52,9 +52,10 @@ export default function handler(req, res) {
     return;
   }
 
-  const { pathname } = new URL(req.url, `http://${req.headers.host}`);
+  // In Vercel, the slug is in req.query.slug (array)
+  const slug = req.query.slug ? req.query.slug.join('/') : '';
   
-  if (pathname === '/api/auth/signup' && req.method === 'POST') {
+  if (slug === 'signup' && req.method === 'POST') {
     const { username, password } = req.body;
 
     if (!username || !password) {
@@ -87,7 +88,7 @@ export default function handler(req, res) {
 
     saveUsers(users);
     res.json({ message: 'Signup successful', user: { username } });
-  } else if (pathname === '/api/auth/login' && req.method === 'POST') {
+  } else if (slug === 'login' && req.method === 'POST') {
     const { username, password } = req.body;
 
     if (!username || !password) {
