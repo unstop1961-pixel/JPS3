@@ -17,13 +17,14 @@ export default function handler(req, res) {
     return;
   }
 
-  // Serve index.html for all non-API routes (SPA routing)
+  // Serve index.html for SPA routing
   const filePath = path.join(__dirname, '../frontend', 'index.html');
   
   try {
     if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, 'utf8');
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
       res.status(200).send(content);
     } else {
       res.status(404).json({ message: 'Not found - index.html missing' });

@@ -41,7 +41,26 @@ function saveUsers(users) {
   }
 }
 
-export default function handler(req, res) {
+// Parse JSON body helper for serverless
+async function parseBody(req) {
+  if (req.body) return req.body;
+  if (!req.readable) return {};
+  
+  return new Promise((resolve, reject) => {
+    let data = '';
+    req.on('data', chunk => { data += chunk; });
+    req.on('end', () => {
+      try {
+        resolve(data ? JSON.parse(data) : {});
+      } catch (e) {
+        reject(e);
+      }
+    });
+    req.on('error', reject);
+  });
+}
+
+export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
@@ -52,61 +71,74 @@ export default function handler(req, res) {
     return;
   }
 
-  // In Vercel, the slug is in req.query.slug (array)
-  const slug = req.query.slug ? req.query.slug.join('/') : '';
-  
-  if (slug === 'signup' && req.method === 'POST') {
-    const { username, password } = req.body;
-
-    if (!username || !password) {
-      return res.status(400).json({ message: 'Username and password required' });
+  try {
+    // Parse body if not already parsed
+    if (req.method !== 'GET' && !req.body) {
+      req.body = await parseBody(req);
     }
 
-    if (username.length < 3) {
-      return res.status(400).json({ message: 'Username must be at least 3 characters' });
+    // In Vercel, the slug is in req.query.slug (array)
+    const slug = req.query.slug ? req.query.slug.join('/') : '';
+    
+    if (slug === 'signup' && req.method === 'POST') {
+      const { username, password } = req.body || {};
+
+      if (!username || !password) {
+        return res.status(400).json({ message: 'Username and password required' });
+      }
+
+      if (username.length < 3) {
+        return res.status(400).json({ message: 'Username must be at least 3 characters' });
+      }
+
+      if (password.length < 6) {
+        return res.status(400).json({ message: 'Password must be at least 6 characters' });
+      }
+
+      const users = loadUsers();
+
+      if (users[username]) {
+        return res.status(400).json({ message: 'Username already exists' });
+      }
+
+      users[username] = {
+        username,
+        password: hashPassword(password),
+        createdAt: new Date(),
+        wishlist: [],
+        visitedLog: [],
+        reviewDiary: [],
+        quizScores: []
+      };
+
+      saveUsers(users);
+      return res.status(201).json({ message: 'Signup successful', user: { username } });
+    } else if (slug === 'login' && req.method === 'POST') {
+      const { username, password } = req.body || {};
+
+      if (!username || !password) {
+        return res.status(400).json({ message: 'Username and password required' });
+      }
+
+      const users = loadUsers();
+      const user = users[username];
+
+      if (!user || user.password !== hashPassword(password)) {
+        return res.status(401).json({ message: 'Invalid username or password' });
+      }
+
+      return res.status(200).json({
+        message: 'Login successful',
+        user: { username: user.username }
+      });
+    } else {
+      return res.status(404).json({ message: 'Not found' });
     }
-
-    if (password.length < 6) {
-      return res.status(400).json({ message: 'Password must be at least 6 characters' });
-    }
-
-    const users = loadUsers();
-
-    if (users[username]) {
-      return res.status(400).json({ message: 'Username already exists' });
-    }
-
-    users[username] = {
-      username,
-      password: hashPassword(password),
-      createdAt: new Date(),
-      wishlist: [],
-      visitedLog: [],
-      reviewDiary: [],
-      quizScores: []
-    };
-
-    saveUsers(users);
-    res.json({ message: 'Signup successful', user: { username } });
-  } else if (slug === 'login' && req.method === 'POST') {
-    const { username, password } = req.body;
-
-    if (!username || !password) {
-      return res.status(400).json({ message: 'Username and password required' });
-    }
-
-    const users = loadUsers();
-    const user = users[username];
-
-    if (!user || user.password !== hashPassword(password)) {
-      return res.status(401).json({ message: 'Invalid username or password' });
-    }
-
-    res.json({
-      message: 'Login successful',
-      user: { username: user.username }
+  } catch (error) {
+    console.error('Auth handler error:', error);
+    return res.status(500).json({ 
+      message: 'Internal server error', 
+      error: process.env.NODE_ENV === 'development' ? error.message : undefined 
     });
-  } else {
-    res.status(404).json({ message: 'Not found' });
   }
 }
