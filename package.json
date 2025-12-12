@@ -1,6 +1,7 @@
 {
   "name": "digital-museum-guide",
   "version": "1.0.0",
+  "type": "module",
   "description": "A web portal to discover and track cultural journey across Indian museums",
   "main": "backend/server.js",
   "scripts": {
@@ -20,7 +21,7 @@
   "author": "Digital Museum Guide Team",
   "license": "MIT",
   "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=6.0.0"
+    "node": "18.x",
+    "npm": ">=8.0.0"
   }
 }

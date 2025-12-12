@@ -8,3 +8,8 @@ check-deployment.js
 *.md
 .env.local
 .env.*.local
+backend/server.js
+backend/
+Dockerfile
+docker-compose.yml
+Procfile
