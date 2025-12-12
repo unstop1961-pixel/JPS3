@@ -186,17 +186,26 @@ function loadMuseums() {
     });
 }
 
-function displayMuseums(museumsList) {
+function displayMuseums() {
   const container = document.getElementById('museumGrid');
   if (!container) return;
 
-  if (museumsList.length === 0) {
-    container.innerHTML = '<p class="text-center">No museums found</p>';
+  const searchTerm = document.getElementById('searchInput')?.value.toLowerCase() || '';
+
+  const filtered = museums.filter(m =>
+    m.name.toLowerCase().includes(searchTerm) ||
+    m.city.toLowerCase().includes(searchTerm) ||
+    m.state.toLowerCase().includes(searchTerm) ||
+    m.description.toLowerCase().includes(searchTerm)
+  );
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<p style="text-align: center; color: #999; grid-column: 1/-1;">No museums found. Try a different search.</p>';
     return;
   }
 
-  container.innerHTML = museumsList.map(museum => `
-    <div class="museum-card">
+  container.innerHTML = filtered.map(museum => `
+    <div class="museum-card" onclick="showMuseumProfile(${museum.id})" style="cursor: pointer;">
       <div class="museum-card-image">
         <img src="${museum.museumImage || museumImages[museum.id] || 'images/museum-placeholder.svg'}" alt="${museum.name}" style="width: 100%; height: 100%; object-fit: cover;"/>
       </div>
@@ -205,9 +214,9 @@ function displayMuseums(museumsList) {
         <p class="museum-card-location">${museum.city}, ${museum.state}</p>
         <p class="museum-card-description">${museum.description}</p>
         <div class="museum-card-footer">
-          <button class="btn btn-primary btn-small" onclick="showMuseumProfile(${museum.id})">View Profile</button>
+          <button class="btn btn-primary btn-small" onclick="event.stopPropagation(); showMuseumProfile(${museum.id})">View Profile</button>
           ${currentUser ? `
-            <button class="btn btn-secondary btn-small" onclick="addToWishlist(${museum.id})">Add to Wishlist</button>
+            <button class="btn btn-secondary btn-small" onclick="event.stopPropagation(); addToWishlist(${museum.id})">❤️ Wishlist</button>
           ` : ''}
         </div>
       </div>
@@ -1015,7 +1024,143 @@ function showAlert(message, type) {
   }, 5000);
 }
 
+// ===== NEW FEATURES =====
+
+// Map View with Filters
+function filterAndMapMuseums() {
+  const state = document.getElementById('stateFilter')?.value || '';
+  const type = document.getElementById('typeFilter')?.value || '';
+  const maxPrice = parseInt(document.getElementById('priceFilter')?.value) || Infinity;
+
+  let filtered = museums.filter(m => {
+    const stateMatch = !state || m.state === state;
+    const priceMatch = m.ticketPrice ? parseInt(m.ticketPrice.split(' ')[0].replace('Rs.', '')) <= maxPrice : true;
+    return stateMatch && priceMatch;
+  });
+
+  displayMuseumMap(filtered);
+}
+
+function displayMuseumMap(museumList) {
+  const mapContainer = document.getElementById('mapContainer');
+  if (!mapContainer) return;
+
+  // Create a simple list view (full map would need Google Maps API)
+  let html = '<div style="padding: 1rem;">';
+  if (museumList.length === 0) {
+    html += '<p style="text-align: center; color: #999;">No museums match your filters</p>';
+  } else {
+    html += `<p style="margin-bottom: 1rem;"><strong>${museumList.length} museums found</strong></p>`;
+    html += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;">';
+    museumList.forEach(m => {
+      html += `
+        <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #ddd; cursor: pointer;" onclick="showMuseumProfile(${m.id})">
+          <h4 style="margin: 0 0 0.5rem 0; color: #8B4513;">${m.name}</h4>
+          <p style="margin: 0.3rem 0; font-size: 0.9rem; color: #666;">📍 ${m.city}, ${m.state}</p>
+          <p style="margin: 0.3rem 0; font-size: 0.9rem; color: #666;">💰 ${m.ticketPrice}</p>
+        </div>
+      `;
+    });
+    html += '</div>';
+  }
+  html += '</div>';
+  mapContainer.innerHTML = html;
+}
+
+// User Profile with Achievements
+function loadUserProfile() {
+  if (!currentUser) {
+    showAlert('Please login first', 'error');
+    return;
+  }
+
+  // Display user stats
+  const visitedCount = currentUser.visitedLog ? currentUser.visitedLog.length : 0;
+  const reviewCount = currentUser.reviewDiary ? currentUser.reviewDiary.length : 0;
+  const quizCount = currentUser.quizScores ? currentUser.quizScores.length : 0;
+
+  document.getElementById('profileUsername').textContent = `@${currentUser.username}`;
+  document.getElementById('profileStats').innerHTML = `
+    <p>🏛️ Visited: ${visitedCount} museums</p>
+    <p>⭐ Reviews: ${reviewCount}</p>
+    <p>🎓 Quizzes: ${quizCount} completed</p>
+  `;
+
+  // Display achievements
+  displayAchievements(visitedCount, quizCount, reviewCount);
+}
+
+function displayAchievements(visited, quizzes, reviews) {
+  const achievements = [];
+
+  // Visitor badges
+  if (visited >= 1) achievements.push({ icon: '🏛️', name: 'Explorer', desc: 'Visit 1 museum' });
+  if (visited >= 3) achievements.push({ icon: '🗺️', name: 'Wanderer', desc: 'Visit 3 museums' });
+  if (visited >= 5) achievements.push({ icon: '🎯', name: 'Adventurer', desc: 'Visit 5 museums' });
+  if (visited >= 10) achievements.push({ icon: '🌟', name: 'Cultural Icon', desc: 'Visit 10 museums' });
+
+  // Quiz badges
+  if (quizzes >= 1) achievements.push({ icon: '🎓', name: 'Scholar', desc: 'Complete 1 quiz' });
+  if (quizzes >= 5) achievements.push({ icon: '🧠', name: 'Expert', desc: 'Complete 5 quizzes' });
+
+  // Review badges
+  if (reviews >= 1) achievements.push({ icon: '✏️', name: 'Reviewer', desc: 'Write 1 review' });
+  if (reviews >= 5) achievements.push({ icon: '📝', name: 'Critic', desc: 'Write 5 reviews' });
+
+  const container = document.getElementById('achievementsContainer');
+  if (!container) return;
+
+  container.innerHTML = achievements.map(a => `
+    <div style="text-align: center; padding: 1rem; background: #f5f5f5; border-radius: 8px; border: 2px solid #8B4513;">
+      <div style="font-size: 2rem; margin-bottom: 0.5rem;">${a.icon}</div>
+      <p style="margin: 0; font-weight: bold; color: #8B4513;">${a.name}</p>
+      <p style="margin: 0.3rem 0 0 0; font-size: 0.8rem; color: #666;">${a.desc}</p>
+    </div>
+  `).join('');
+}
+
+// Social Sharing Functions
+function shareToTwitter() {
+  if (!currentUser) return;
+  const visited = currentUser.visitedLog ? currentUser.visitedLog.length : 0;
+  const text = `I've explored ${visited} museums on the Digital Museum Guide! Discover India's cultural heritage with me 🏛️`;
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+function shareToWhatsApp() {
+  if (!currentUser) return;
+  const visited = currentUser.visitedLog ? currentUser.visitedLog.length : 0;
+  const text = `Check out the Digital Museum Guide! I've visited ${visited} museums so far. Explore Indian museums with me 🏛️`;
+  window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+function shareToFacebook() {
+  if (!currentUser) return;
+  const url = window.location.href;
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+}
+
+function copyProfileLink() {
+  const link = `${window.location.origin}?user=${currentUser.username}`;
+  navigator.clipboard.writeText(link);
+  showAlert('Profile link copied to clipboard!', 'success');
+}
+
 // Initialization
+window.addEventListener('load', () => {
+  updateNavigation();
+  loadMuseums();
+  loadQuiz();
+  
+  // Add event listeners for search and filters
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+  if (searchInput) {
+    searchInput.addEventListener('keyup', () => displayMuseums());
+    if (searchBtn) searchBtn.addEventListener('click', () => displayMuseums());
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   // Check if user is logged in
   const savedUser = localStorage.getItem('currentUser');

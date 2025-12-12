@@ -13,7 +13,9 @@
       <div class="logo">🏛️ Digital Museum Guide</div>
       <nav>
         <a href="#" onclick="showPage('home'); return false;" class="user-nav" style="display: none;">Home</a>
-        <a href="#" onclick="showPage('directory'); return false;" class="user-nav" style="display: none;">Museum Directory</a>
+        <a href="#" onclick="showPage('directory'); return false;" class="user-nav" style="display: none;">Museums</a>
+        <a href="#" onclick="showPage('map'); return false;" class="user-nav" style="display: none;">Map</a>
+        <a href="#" onclick="currentUser ? (showPage('profile'), loadUserProfile()) : (showPage('auth')); return false;" class="user-nav" style="display: none;">Profile</a>
         <a href="#" onclick="currentUser ? (showPage('dashboard'), loadDashboard()) : (showPage('auth')); return false;" class="user-nav" style="display: none;">Dashboard</a>
       </nav>
       <div class="auth-buttons"></div>
@@ -80,6 +82,88 @@
     <div class="container">
       <button class="btn btn-secondary" onclick="showPage('directory')">← Back to Directory</button>
       <div id="museumProfileContainer" style="margin-top: 1.5rem;"></div>
+    </div>
+  </div>
+
+  <!-- Museum Map Page -->
+  <div id="map" class="page">
+    <div class="container">
+      <h1 style="color: #8B4513; margin-bottom: 1rem;">Museum Map</h1>
+      
+      <!-- Filters -->
+      <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+        <h3>Filter Museums</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <div>
+            <label><strong>By State:</strong></label>
+            <select id="stateFilter" onchange="filterAndMapMuseums()">
+              <option value="">All States</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+            </select>
+          </div>
+          <div>
+            <label><strong>By Type:</strong></label>
+            <select id="typeFilter" onchange="filterAndMapMuseums()">
+              <option value="">All Types</option>
+              <option value="art">Art & Sculptures</option>
+              <option value="history">History</option>
+              <option value="natural">Natural History</option>
+              <option value="railway">Railway</option>
+              <option value="buddhist">Buddhist</option>
+            </select>
+          </div>
+          <div>
+            <label><strong>Max Ticket Price (Rs):</strong></label>
+            <input type="number" id="priceFilter" placeholder="e.g., 200" onchange="filterAndMapMuseums()">
+          </div>
+        </div>
+      </div>
+
+      <div id="mapContainer" style="width: 100%; height: 600px; border-radius: 8px; overflow: hidden; border: 2px solid #ddd;"></div>
+    </div>
+  </div>
+
+  <!-- User Profile Page -->
+  <div id="profile" class="page">
+    <div class="container">
+      <h1 style="color: #8B4513; margin-bottom: 2rem;">My Profile & Achievements</h1>
+      
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem;">
+        <!-- Profile Info -->
+        <div style="background: white; padding: 2rem; border-radius: 8px;">
+          <div style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">👤</div>
+            <h2 id="profileUsername">Loading...</h2>
+            <p id="profileStats" style="color: #666; margin: 1rem 0;"></p>
+          </div>
+        </div>
+
+        <!-- Achievements -->
+        <div style="background: white; padding: 2rem; border-radius: 8px;">
+          <h3 style="color: #8B4513; margin-bottom: 1.5rem;">🏆 Achievements</h3>
+          <div id="achievementsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 1rem;"></div>
+        </div>
+      </div>
+
+      <!-- Share Profile -->
+      <div style="background: white; padding: 2rem; border-radius: 8px; margin-top: 2rem;">
+        <h3 style="color: #8B4513; margin-bottom: 1rem;">Share Your Journey</h3>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="shareToTwitter()">📱 Share on Twitter</button>
+          <button class="btn btn-primary" onclick="shareToWhatsApp()">💬 Share on WhatsApp</button>
+          <button class="btn btn-primary" onclick="shareToFacebook()">👍 Share on Facebook</button>
+          <button class="btn btn-secondary" onclick="copyProfileLink()">🔗 Copy Profile Link</button>
+        </div>
+      </div>
     </div>
   </div>
 

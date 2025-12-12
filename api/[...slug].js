@@ -4,18 +4,9 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const dataDir = path.join(__dirname, '../data');
-
-let museums = [];
-
-try {
-  const museumsData = JSON.parse(fs.readFileSync(path.join(dataDir, 'museums.json'), 'utf8'));
-  museums = museumsData.museums || museumsData;
-} catch (err) {
-  console.error('Error loading museums:', err.message);
-}
 
 export default function handler(req, res) {
+  // Set CORS headers
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
@@ -26,5 +17,19 @@ export default function handler(req, res) {
     return;
   }
 
-  res.status(200).json(museums);
+  // Serve index.html for all non-API routes (SPA routing)
+  const filePath = path.join(__dirname, '../frontend', 'index.html');
+  
+  try {
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.status(200).send(content);
+    } else {
+      res.status(404).json({ message: 'Not found - index.html missing' });
+    }
+  } catch (err) {
+    console.error('Error serving index.html:', err.message);
+    res.status(500).json({ message: 'Internal server error', error: err.message });
+  }
 }
