@@ -1,0 +1,148 @@
+{
+  "quizzes": [
+    {
+      "id": 1,
+      "question": "Which dynasty is known for building the famous Chola bronze idols?",
+      "options": [
+        "Maurya Dynasty",
+        "Chola Dynasty",
+        "Mughal Dynasty",
+        "Gupta Dynasty"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Chola Dynasty (9th-13th centuries) was renowned for creating exquisite bronze idols, especially those of Hindu deities."
+    },
+    {
+      "id": 2,
+      "question": "Which Indian emperor is most famous for the Ashoka Edicts?",
+      "options": [
+        "Chandragupta Maurya",
+        "Emperor Ashoka",
+        "Akbar",
+        "Shah Jahan"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Emperor Ashoka (268-232 BCE) of the Maurya Dynasty left behind the famous Ashoka Edicts engraved on rocks and pillars across India."
+    },
+    {
+      "id": 3,
+      "question": "The paintings at Ajanta Caves primarily depict stories from which religion?",
+      "options": [
+        "Hinduism",
+        "Islam",
+        "Buddhism",
+        "Jainism"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Ajanta Caves (2nd century BCE to 5th century CE) contain Buddhist paintings and sculptures depicting scenes from the Buddha's life and Buddhist teachings."
+    },
+    {
+      "id": 4,
+      "question": "Which dynasty ruled India during the 'Golden Age' with significant cultural and scientific achievements?",
+      "options": [
+        "Maurya Dynasty",
+        "Gupta Dynasty",
+        "Chola Dynasty",
+        "Vijayanagara Dynasty"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Gupta Dynasty (320-550 CE) is considered the 'Golden Age' of India, marked by achievements in mathematics, astronomy, literature, and art."
+    },
+    {
+      "id": 5,
+      "question": "What art form was popularized by the Mughal emperors and featured detailed miniature paintings?",
+      "options": [
+        "Warli Art",
+        "Madhubani Art",
+        "Mughal Miniatures",
+        "Tanjore Art"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Mughal Miniatures were intricate detailed paintings that depicted court scenes, hunting expeditions, and romantic tales, popular during the Mughal era."
+    },
+    {
+      "id": 6,
+      "question": "Which South Indian art form is known for its intricate bronze casting techniques?",
+      "options": [
+        "Tanjore Paintings",
+        "Chola Bronzes",
+        "Warli Art",
+        "Kalamkari"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Chola Bronzes represent the pinnacle of ancient Indian metalwork, showcasing exceptional casting and sculptural expertise from the Chola period."
+    },
+    {
+      "id": 7,
+      "question": "The Harappan Civilization is also known as which civilization?",
+      "options": [
+        "Vedic Civilization",
+        "Indus Valley Civilization",
+        "Aryan Civilization",
+        "Mauryan Civilization"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Harappan Civilization (2600-1900 BCE) is another name for the Indus Valley Civilization, known for its advanced urban planning and seals."
+    },
+    {
+      "id": 8,
+      "question": "Which emperor was responsible for building the Taj Mahal?",
+      "options": [
+        "Akbar",
+        "Jahangir",
+        "Shah Jahan",
+        "Aurangzeb"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Emperor Shah Jahan commissioned the construction of the Taj Mahal as a mausoleum for his beloved wife Mumtaz Mahal in the 17th century."
+    },
+    {
+      "id": 9,
+      "question": "The famous rock-cut caves at Ellora were carved by which religious communities?",
+      "options": [
+        "Only Buddhists",
+        "Only Hindus",
+        "Buddhists, Hindus, and Jains",
+        "Only Jains"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Ellora Caves (6th-10th centuries) contain Buddhist, Hindu, and Jain caves, representing a unique coexistence of three religions during medieval India."
+    },
+    {
+      "id": 10,
+      "question": "Which textile art form from Andhra Pradesh involves natural dyeing and resist printing?",
+      "options": [
+        "Batik",
+        "Kalamkari",
+        "Ikat",
+        "Bandhani"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Kalamkari is an ancient hand-painting and printing art form from Andhra Pradesh, known for its intricate designs and natural dye techniques."
+    },
+    {
+      "id": 11,
+      "question": "Who founded the Maurya Dynasty?",
+      "options": [
+        "Bindusara",
+        "Chandragupta Maurya",
+        "Emperor Ashoka",
+        "Samrat Ashoka"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Chandragupta Maurya founded the Maurya Dynasty around 322 BCE, establishing one of India's greatest empires."
+    },
+    {
+      "id": 12,
+      "question": "What was the primary purpose of the Stupas in ancient Buddhism?",
+      "options": [
+        "To serve as palaces",
+        "To store sacred relics of Buddha and other monks",
+        "To use as administrative centers",
+        "To serve as markets"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Stupas were burial mounds constructed to enshrine sacred relics of Buddha and other revered Buddhist monks, serving as places of worship and pilgrimage."
+    }
+  ]
+}

@@ -1,0 +1,644 @@
+{
+  "museums": [
+    {
+      "id": 1,
+      "name": "National Museum, Delhi",
+      "city": "Delhi",
+      "state": "Delhi",
+      "description": "India's largest museum with artifacts spanning 5,000 years of history",
+      "museumImage": "../data/nationalmus_del.jpg",
+      "aboutMuseum": "The National Museum in Delhi is India's premier institution for art and culture, founded in 1949. It houses over 200,000 artefacts spanning 5,000 years of Indian history. The museum's collections include sculptures, manuscripts, textiles, decorative arts, and archaeological findings from the Indus Valley Civilization to the Mughal period. The stunning Neo-Classical building on Janpath showcases masterpieces from ancient kingdoms, including the renowned Lion Capital of Ashoka and exquisite Chola bronzes. Visitors can explore the vast heritage of India through organized galleries dedicated to different periods and art forms.",
+      "openingHours": "10:00 AM - 6:00 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 20 (Indians), Rs. 650 (Foreigners)",
+      "website": "www.nationalmuseumindia.gov.in",
+      "address": "Janpath, New Delhi 110011",
+      "topExhibits": [
+        {
+          "name": "Harappan Civilization Artifacts",
+          "description": "Ancient seals and pottery from the Indus Valley Civilization (2600-1900 BCE)",
+          "image": "harappan.jpg"
+        },
+        {
+          "name": "Maurya Dynasty Sculptures",
+          "description": "Intricate stone carvings and royal artifacts from Emperor Ashoka's reign",
+          "image": "maurya.jpg"
+        },
+        {
+          "name": "Mughal Manuscripts",
+          "description": "Illuminated manuscripts and calligraphy from the Mughal emperors",
+          "image": "mughal.jpg"
+        },
+        {
+          "name": "South Indian Bronzes",
+          "description": "Exquisite bronze idols from Chola and Pandya dynasties (9th-13th centuries)",
+          "image": "bronzes.jpg"
+        },
+        {
+          "name": "Indian Miniature Paintings",
+          "description": "Detailed miniature paintings depicting royal courts and hunting scenes",
+          "image": "miniatures.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "National Rail Museum, Delhi",
+      "city": "Delhi",
+      "state": "Delhi",
+      "description": "Chronicles the history of Indian railways with vintage locomotives and coaches",
+      "museumImage": "../data/nationalrailmuseum.webp",
+      "aboutMuseum": "The National Rail Museum in Chanakyapuri is a unique institution dedicated to preserving India's railway heritage spanning over 175 years. It exhibits over 45 locomotives, coaches, and rail-related artifacts, including the personal saloon of the Maharaja of Mysore adorned with gold leaf work. The museum showcases the evolution of Indian railways through vintage steam engines, royal coaches, and interactive displays. Visitors can learn about railway engineering, signaling systems, and the role of railways in India's development through well-curated galleries.",
+      "openingHours": "9:30 AM - 6:00 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 50 (Indians), Rs. 300 (Foreigners)",
+      "website": "www.railmuseum.org.in",
+      "address": "Chanakyapuri, New Delhi 110021",
+      "topExhibits": [
+        {
+          "name": "Royal Saloon Coach",
+          "description": "The personal train coach of Maharaja of Mysore with gold leaf decorations",
+          "image": "royal_coach.jpg"
+        },
+        {
+          "name": "Heritage Locomotives",
+          "description": "Historic steam locomotives dating back to the 1800s",
+          "image": "locomotives.jpg"
+        },
+        {
+          "name": "Railway Heritage Gallery",
+          "description": "Artifacts documenting 175+ years of Indian railway history",
+          "image": "railway_history.jpg"
+        },
+        {
+          "name": "Signal Engineering Display",
+          "description": "Evolution of railway signaling technology in India",
+          "image": "signals.jpg"
+        },
+        {
+          "name": "Royal Train Models",
+          "description": "Miniature scale models of historic royal trains",
+          "image": "train_models.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Indian Museum, Kolkata",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "description": "One of India's oldest and largest museums with diverse collections",
+      "museumImage": "../data/indianmuseum.jpg",
+      "aboutMuseum": "Established in 1814, the Indian Museum in Kolkata is the oldest and largest museum in Asia. Located on historic Jawaharlal Nehru Road, it houses a remarkable collection of 2.5 million artifacts spanning archaeology, art, anthropology, geology, zoology, and botany. The museum features Egyptian mummies, Bharhut and Amaravati sculptures, the Lion Capital of Ashoka, Hindu and Buddhist artifacts, and extensive natural history specimens including prehistoric fossils and a dinosaur skeleton. Its elegant colonial architecture combined with world-class collections makes it an essential destination for understanding India's cultural and natural heritage.",
+      "openingHours": "10:00 AM - 5:00 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 20 (Indians), Rs. 400 (Foreigners)",
+      "website": "www.indianmuseum.gov.in",
+      "address": "27 Jawaharlal Nehru Road, Kolkata 700016",
+      "topExhibits": [
+        {
+          "name": "Egyptian Mummies",
+          "description": "Authentic Egyptian mummies and sarcophagi (3000+ years old)",
+          "image": "mummies.jpg"
+        },
+        {
+          "name": "Bharhut Sculptures",
+          "description": "Buddhist stone carvings from the 2nd century BCE",
+          "image": "bharhut.jpg"
+        },
+        {
+          "name": "Geological Specimens",
+          "description": "Meteorites, fossils, and rare mineral collections",
+          "image": "geology.jpg"
+        },
+        {
+          "name": "Bengal School Art",
+          "description": "Paintings by Abanindranath Tagore and other Bengal School artists",
+          "image": "bengal_art.jpg"
+        },
+        {
+          "name": "Arms and Armory",
+          "description": "Historic weapons, armor, and military artifacts",
+          "image": "armory.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya (CSMVS), Mumbai",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "description": "Premier art museum showcasing Indian art, textiles, and decorative arts",
+      "museumImage": "../data/Chhatrapati_Shivaji_Maharaj_Vastu_Sangrahalaya.jpg",
+      "aboutMuseum": "The Chhatrapati Shivaji Maharaj Vastu Sangrahalaya in Mumbai is one of India's premier art museums, housed in an iconic Gothic-Victorian architecture building. The museum showcases an extraordinary collection of Indian art spanning from pre-historic times to contemporary periods. Its galleries feature Mughal carpets, traditional textiles and sarees, intricate sculptures from Hindu, Buddhist and Jain traditions, Maratha arms and armor, and remarkable miniature paintings. The museum also displays decorative arts, manuscripts, and provides comprehensive insights into India's artistic evolution.",
+      "openingHours": "10:15 AM - 6:00 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 150 (Indians), Rs. 400 (Foreigners)",
+      "website": "www.csmvs.in",
+      "address": "The Fort, Mumbai 400023",
+      "topExhibits": [
+        {
+          "name": "Mughal Carpets",
+          "description": "Exquisite hand-woven carpets from Mughal emperors' courts",
+          "image": "carpets.jpg"
+        },
+        {
+          "name": "Indian Textiles",
+          "description": "Traditional sarees, fabrics, and textile dyeing techniques from across India",
+          "image": "textiles.jpg"
+        },
+        {
+          "name": "Sculpture Gallery",
+          "description": "Hindu, Buddhist, and Jain sculptures from different periods",
+          "image": "sculptures.jpg"
+        },
+        {
+          "name": "Arms and Armor of Marathas",
+          "description": "Weapons and armor of Maratha warriors including Shivaji's possessions",
+          "image": "maratha_arms.jpg"
+        },
+        {
+          "name": "Miniature Paintings",
+          "description": "Mughal and Rajasthani miniature paintings with intricate details",
+          "image": "mughal_miniatures.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "National Museum of Natural History, Delhi",
+      "city": "Delhi",
+      "state": "Delhi",
+      "description": "Dedicated to natural heritage with fossils, skeletons, and ecological displays",
+      "museumImage": "../data/national_museum_natural.jpg",
+      "aboutMuseum": "The National Museum of Natural History in Delhi is dedicated to showcasing India's rich natural heritage. The museum features extensive collections of fossils, dinosaur skeletons, geological specimens, and ecological displays that narrate the story of Earth's evolution and India's biodiversity. Interactive galleries educate visitors about ecology, evolution, and environmental conservation. The museum is an ideal destination for students and nature enthusiasts to understand natural processes and the importance of biodiversity.",
+      "openingHours": "10:00 AM - 5:00 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 20 (Indians), Rs. 200 (Foreigners)",
+      "website": "www.nmnh.nic.in",
+      "address": "Barakhamba Road, New Delhi 110001",
+      "topExhibits": [
+        {
+          "name": "Dinosaur Exhibition",
+          "description": "Fossils and skeletal reconstructions of prehistoric dinosaurs",
+          "image": "dinosaurs.jpg"
+        },
+        {
+          "name": "Wildlife Gallery",
+          "description": "Taxidermied specimens of Indian fauna and biodiversity",
+          "image": "wildlife.jpg"
+        },
+        {
+          "name": "Human Evolution",
+          "description": "Timeline and exhibits showing the evolution of human species",
+          "image": "evolution.jpg"
+        },
+        {
+          "name": "Himalayan Ecology",
+          "description": "Flora and fauna of the Himalayan mountains",
+          "image": "himalayan.jpg"
+        },
+        {
+          "name": "Ocean Life Exhibition",
+          "description": "Marine biodiversity including coral ecosystems and sea creatures",
+          "image": "ocean.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Salar Jung Museum, Hyderabad",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "description": "One of India's richest collections with artifacts from around the world",
+      "museumImage": "../data/salar-jung-museum-hyderabad-secunderabad-telangana-14-musthead-hero.jpg",
+      "aboutMuseum": "The Salar Jung Museum in Hyderabad houses one of India's richest and most diverse collections of artifacts from around the world. Built from the personal collection of Mir Osman Ali Khan, the museum features exquisite jade carvings, European paintings, decorative arts, Egyptian mummies, Persian manuscripts, and rare manuscripts. The museum is particularly renowned for its jade and marble sculptures, French and English furniture, and Mughal miniature paintings. Its treasures span continents and centuries, making it a world-class repository of global cultural heritage.",
+      "openingHours": "10:00 AM - 5:00 PM (Closed Fridays)",
+      "ticketPrice": "Rs. 50 (Indians), Rs. 300 (Foreigners)",
+      "website": "www.salarjungmuseum.org",
+      "address": "Osman Bagh, Hyderabad 500008",
+      "topExhibits": [
+        {
+          "name": "Jade Collection",
+          "description": "Exquisite jade carvings and sculptures from China and Central Asia",
+          "image": "jade.jpg"
+        },
+        {
+          "name": "Persian Carpets",
+          "description": "Ornate carpets from Persia with intricate weaving patterns",
+          "image": "persian_carpets.jpg"
+        },
+        {
+          "name": "Indian Manuscripts",
+          "description": "Hand-written texts on history, poetry, and philosophy",
+          "image": "manuscripts.jpg"
+        },
+        {
+          "name": "Furniture Gallery",
+          "description": "Historic furniture from various Indian and international styles",
+          "image": "furniture.jpg"
+        },
+        {
+          "name": "Decorative Arts",
+          "description": "Porcelain, glass, and decorative objects from multiple civilizations",
+          "image": "decorative_arts.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Prince of Wales Museum (Now CSMVS), Bengaluru",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "description": "Historic museum with Indian and Western art collections",
+      "aboutMuseum": "The Prince of Wales Museum in Bengaluru stands as a testament to Karnataka's rich artistic heritage. This institution houses an impressive collection of South Indian sculptures, Chola dynasty bronzes, and classical Indian paintings alongside Western masterpieces. A visit here offers visitors a comprehensive understanding of how different artistic traditions shaped India's cultural landscape.",
+      "museumImage": "../data/prince of wales.jpg",
+      "openingHours": "10:00 AM - 5:30 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 100 (Indians), Rs. 300 (Foreigners)",
+      "website": "www.bengalurumuseum.org",
+      "address": "Kasturba Road, Bengaluru 560001",
+      "topExhibits": [
+        {
+          "name": "Chola Dynasty Bronzes",
+          "description": "Bronze idols from the Chola dynasty showing exquisite craftsmanship",
+          "image": "chola_bronzes.jpg"
+        },
+        {
+          "name": "Indian Paintings",
+          "description": "Classical and contemporary Indian paintings from various regions",
+          "image": "indian_paintings.jpg"
+        },
+        {
+          "name": "Hoysala Architecture Models",
+          "description": "Models and artifacts representing Hoysala dynasty temples",
+          "image": "hoysala.jpg"
+        },
+        {
+          "name": "South Indian Sculptures",
+          "description": "Stone and bronze sculptures from South Indian dynasties",
+          "image": "south_sculptures.jpg"
+        },
+        {
+          "name": "Decorative Objects",
+          "description": "Vases, pottery, and decorative items from various periods",
+          "image": "decorative_objects.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Victoria and Albert Museum, Lucknow",
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "description": "Showcases Lucknow's rich Nawabi heritage and culture",
+      "aboutMuseum": "The Victoria and Albert Museum in Lucknow is a treasure trove of Nawabi splendor and cultural sophistication. This museum preserves the personal belongings of Lucknow's Nawabs, exquisite traditional embroidery, and precious royal jewelry that once adorned the courts. Through its collections, visitors can witness the grandeur and artistic achievements of one of India's most culturally refined cities.",
+      "museumImage": "../data/Victoria_&_Albert_Museum_Entrance,_London,_UK_-_Diliff.jpg",
+      "openingHours": "10:00 AM - 5:00 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 30 (Indians), Rs. 150 (Foreigners)",
+      "website": "www.vamuseumlucknow.org",
+      "address": "Hazratganj, Lucknow 226001",
+      "topExhibits": [
+        {
+          "name": "Nawabi Artifacts",
+          "description": "Personal belongings and artifacts of Lucknow's Nawabs",
+          "image": "nawabi_artifacts.jpg"
+        },
+        {
+          "name": "Lucknowi Embroidery",
+          "description": "Traditional Lucknowi embroidery and textile work showcases",
+          "image": "lucknowi_embroidery.jpg"
+        },
+        {
+          "name": "Photography Archives",
+          "description": "Historic photographs documenting Lucknow's transformation",
+          "image": "photography.jpg"
+        },
+        {
+          "name": "Royal Jewelry",
+          "description": "Precious jewelry worn by Nawabi royalty",
+          "image": "jewelry.jpg"
+        },
+        {
+          "name": "Manuscripts and Documents",
+          "description": "Historical documents related to Lucknow's governance",
+          "image": "documents.jpg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Maharaja Sayajirao Museum, Vadodara",
+      "city": "Vadodara",
+      "state": "Gujarat",
+      "description": "World-class museum with diverse art and history collections",
+      "aboutMuseum": "The Maharaja Sayajirao Museum in Vadodara is renowned as one of India's finest art institutions, boasting collections that rival international museums. Its galleries feature masterpieces by European masters alongside works by Raja Ravi Varma, ancient terracotta figures from the Indus Valley, and artifacts representing India's diverse dynasties. This museum exemplifies how royal patronage created a legacy of artistic excellence.",
+      "museumImage": "../data/maharaja sirajirao museum.jpg",
+      "openingHours": "10:30 AM - 5:30 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 20 (Indians), Rs. 200 (Foreigners)",
+      "website": "www.msmuseum.org",
+      "address": "Fatehgunj, Vadodara 390002",
+      "topExhibits": [
+        {
+          "name": "European Paintings",
+          "description": "Works by European masters including paintings from Renaissance era",
+          "image": "european_paintings.jpg"
+        },
+        {
+          "name": "Indian Art Collection",
+          "description": "Paintings by Ravi Varma and other Indian masters",
+          "image": "indian_art.jpg"
+        },
+        {
+          "name": "Terracotta Figures",
+          "description": "Ancient terracotta toys and figurines from Indus Valley",
+          "image": "terracotta.jpg"
+        },
+        {
+          "name": "Weapons and Armor",
+          "description": "Historic weapons from Maratha and other Indian rulers",
+          "image": "weapons_armor.jpg"
+        },
+        {
+          "name": "Natural History Section",
+          "description": "Fossils, specimens of flora and fauna from around the world",
+          "image": "natural_history.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Government Museum, Chennai",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "description": "Displays artifacts of South Indian history and culture",
+      "aboutMuseum": "The Government Museum in Chennai is a premier institution dedicated to preserving South India's artistic and cultural heritage. Home to magnificent Chola bronzes, intricate Pallava stone carvings, and rare palm leaf manuscripts, this museum takes visitors on a journey through thousands of years of South Indian civilization. Its collections are particularly strong in showcasing the sophisticated aesthetic achievements of the Chola and Pallava dynasties.",
+      "museumImage": "../data/Government_Museum,_Chennai.htm",
+      "openingHours": "9:30 AM - 5:00 PM (Closed Fridays)",
+      "ticketPrice": "Rs. 15 (Indians), Rs. 150 (Foreigners)",
+      "website": "www.chennaimuseum.org",
+      "address": "Pantheon Road, Chennai 600008",
+      "topExhibits": [
+        {
+          "name": "Chola Bronzes",
+          "description": "Magnificent bronze sculptures from the Chola empire",
+          "image": "chola_bronzes2.jpg"
+        },
+        {
+          "name": "Pallava Art",
+          "description": "Stone carvings and architectural fragments from Pallava dynasty",
+          "image": "pallava_art.jpg"
+        },
+        {
+          "name": "Palm Leaf Manuscripts",
+          "description": "Ancient texts inscribed on palm leaves with traditional scripts",
+          "image": "palm_manuscripts.jpg"
+        },
+        {
+          "name": "Mughal Artifacts",
+          "description": "Items from Mughal period showing Indo-Islamic art",
+          "image": "mughal_artifacts.jpg"
+        },
+        {
+          "name": "Buddhist Sculptures",
+          "description": "Stone sculptures from Buddhist temples and monasteries",
+          "image": "buddhist_sculptures.jpg"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Mathura Museum, Mathura",
+      "city": "Mathura",
+      "state": "Uttar Pradesh",
+      "description": "Premier museum for Hindu and Buddhist art from North India",
+      "aboutMuseum": "The Mathura Museum in Mathura is a unique repository of Buddhist and Hindu artistic traditions that emerged from this sacred pilgrimage city. Its collection features exquisite Buddha statues from the renowned Mathura School of Art, sculptures depicting Krishna's life, and artifacts from the Sunga period that illustrate the spiritual and cultural sophistication of ancient North India. This museum preserves the artistic legacy of a city revered as the birthplace of Lord Krishna.",
+      "museumImage": "../data/mathura museum.jpg",
+      "openingHours": "10:00 AM - 5:00 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 15 (Indians), Rs. 200 (Foreigners)",
+      "website": "www.mathuramuseum.org",
+      "address": "Dampier Road, Mathura 281001",
+      "topExhibits": [
+        {
+          "name": "Mathura School of Art",
+          "description": "Buddha statues and sculptures from Mathura's artistic tradition",
+          "image": "mathura_art.jpg"
+        },
+        {
+          "name": "Krishna Iconography",
+          "description": "Sculptures depicting scenes from Lord Krishna's life",
+          "image": "krishna_sculptures.jpg"
+        },
+        {
+          "name": "Sunga Period Artifacts",
+          "description": "Stone carvings from the Sunga dynasty period",
+          "image": "sunga_artifacts.jpg"
+        },
+        {
+          "name": "Terracotta Collection",
+          "description": "Ancient terracotta toys and household items",
+          "image": "terracotta_collection.jpg"
+        },
+        {
+          "name": "Sanskrit Manuscripts",
+          "description": "Hand-written religious texts and philosophical works",
+          "image": "sanskrit_manuscripts.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Sanchi Museum, Sanchi",
+      "city": "Sanchi",
+      "state": "Madhya Pradesh",
+      "description": "Museum dedicated to Buddhist art near the famous Sanchi Stupa",
+      "aboutMuseum": "The Sanchi Museum stands as a gateway to understanding Buddhist art and architecture in ancient India. Located adjacent to the world-renowned Sanchi Stupa, this museum houses fragments of the stupa itself, intricate stone carvings depicting Buddhist narratives, and Buddha statues spanning different artistic periods. Visitors here gain insight into how Buddhist philosophy inspired some of the finest sculptural achievements in human history.",
+      "museumImage": "../data/Sanchi_Archaeological_Museum.jpg",
+      "openingHours": "9:00 AM - 5:00 PM (Open daily)",
+      "ticketPrice": "Rs. 15 (Indians), Rs. 200 (Foreigners)",
+      "website": "www.sanchimuseum.org",
+      "address": "Sanchi, Madhya Pradesh 464993",
+      "topExhibits": [
+        {
+          "name": "Buddha Statues",
+          "description": "Stone sculptures of Buddha from different periods",
+          "image": "buddha_statues.jpg"
+        },
+        {
+          "name": "Stupa Fragments",
+          "description": "Stones and decorative elements from the Great Sanchi Stupa",
+          "image": "stupa_fragments.jpg"
+        },
+        {
+          "name": "Ornamental Stones",
+          "description": "Intricately carved stones depicting Buddhist narratives",
+          "image": "ornamental_stones.jpg"
+        },
+        {
+          "name": "Buddhist Texts",
+          "description": "Ancient Buddhist philosophical texts and manuscripts",
+          "image": "buddhist_texts.jpg"
+        },
+        {
+          "name": "Pillar Capitals",
+          "description": "Decorative tops of pillars from Buddhist monasteries",
+          "image": "pillar_capitals.jpg"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Ajanta and Ellora Caves Museum, Aurangabad",
+      "city": "Aurangabad",
+      "state": "Maharashtra",
+      "description": "Repository of artifacts from the famous Ajanta and Ellora cave complexes",
+      "aboutMuseum": "The Ajanta and Ellora Caves Museum in Aurangabad showcases artifacts and replicas from two of India's most spectacular archaeological sites. The museum displays extraordinary cave paintings, intricately carved sculptures, and architectural models that illustrate the engineering genius of ancient Indian craftsmen. Through its collections, visitors can appreciate the remarkable achievements of Buddhist, Hindu, and Jain artists who worked in these caves over centuries.",
+      "museumImage": "../data/ajanta and allora caves museum.cms",
+      "openingHours": "9:30 AM - 6:00 PM (Open daily)",
+      "ticketPrice": "Rs. 30 (Indians), Rs. 300 (Foreigners)",
+      "website": "www.ajantaelloramuseum.org",
+      "address": "Aurangabad 431004",
+      "topExhibits": [
+        {
+          "name": "Cave Paintings",
+          "description": "Replicas of famous frescoes from Ajanta caves",
+          "image": "cave_paintings.jpg"
+        },
+        {
+          "name": "Sculpture Gallery",
+          "description": "Stone carvings found during excavations at Ajanta and Ellora",
+          "image": "cave_sculptures.jpg"
+        },
+        {
+          "name": "Buddhist Manuscripts",
+          "description": "Ancient Buddhist texts recovered from the caves",
+          "image": "cave_manuscripts.jpg"
+        },
+        {
+          "name": "Architectural Models",
+          "description": "Scale models showing the layout and structure of cave complexes",
+          "image": "cave_models.jpg"
+        },
+        {
+          "name": "Pottery and Artifacts",
+          "description": "Household items and pottery discovered in the caves",
+          "image": "cave_pottery.jpg"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Jaipur City Museum, Jaipur",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "description": "Showcases the history and culture of the Pink City of Jaipur",
+      "aboutMuseum": "The Jaipur City Museum, nestled within the City Palace complex, narrates the fascinating story of Jaipur's transformation into one of India's most planned cities. The museum displays the personal belongings of Jaipur's Maharajas, exquisite traditional Rajasthani paintings, ornate royal furniture, and weapons of Rajputana warriors. Through these artifacts, visitors understand how the vision of a ruler created a city that remains architecturally unique to this day.",
+      "museumImage": "../data/jaipur city museum.jpg",
+      "openingHours": "10:00 AM - 5:30 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 40 (Indians), Rs. 200 (Foreigners)",
+      "website": "www.jaipur-museum.org",
+      "address": "City Palace Complex, Jaipur 302002",
+      "topExhibits": [
+        {
+          "name": "Maharaja's Personal Belongings",
+          "description": "Items used by the Maharajas of Jaipur",
+          "image": "maharaja_belongings.jpg"
+        },
+        {
+          "name": "Rajasthani Art",
+          "description": "Traditional Rajasthani paintings and miniatures",
+          "image": "rajasthani_art.jpg"
+        },
+        {
+          "name": "Royal Furniture",
+          "description": "Ornate furniture from Jaipur's royal period",
+          "image": "royal_furniture.jpg"
+        },
+        {
+          "name": "Weapons and Armor",
+          "description": "Swords, shields, and armor of Rajputana warriors",
+          "image": "rajput_weapons.jpg"
+        },
+        {
+          "name": "Textile Collection",
+          "description": "Traditional Rajasthani textiles and garments",
+          "image": "rajasthani_textiles.jpg"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Albert Hall Museum, Jaipur",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "description": "Victorian-style museum with Indian and foreign artifacts",
+      "aboutMuseum": "The Albert Hall Museum in Jaipur is a magnificent Victorian-era building that houses a fascinating blend of Indian and international collections. From ancient Egyptian mummies to Indian sculptures, handwoven carpets to precious jewelry, this museum offers a global perspective on human artistic achievement. Its eclectic collection reflects the cosmopolitan tastes of Jaipur's royal patrons and remains a testament to their appreciation for art from diverse cultures.",
+      "museumImage": "../data/albert-hall-museum-jaipur-rajasthan-3-attr-hero.jpg",
+      "openingHours": "9:00 AM - 5:00 PM (Closed Mondays)",
+      "ticketPrice": "Rs. 40 (Indians), Rs. 200 (Foreigners)",
+      "website": "www.alberthallmuseum.org",
+      "address": "Ram Niwas Garden, Jaipur 302004",
+      "topExhibits": [
+        {
+          "name": "Egyptian Artifacts",
+          "description": "Ancient Egyptian mummies and hieroglyphic inscriptions",
+          "image": "egyptian_artifacts.jpg"
+        },
+        {
+          "name": "Indian Sculptures",
+          "description": "Stone and bronze sculptures from various Indian periods",
+          "image": "hall_sculptures.jpg"
+        },
+        {
+          "name": "Carpet Collection",
+          "description": "Handwoven carpets from Jaipur and other Indian regions",
+          "image": "carpet_collection.jpg"
+        },
+        {
+          "name": "Precious Jewelry",
+          "description": "Ornamental jewelry and precious gems",
+          "image": "precious_jewelry.jpg"
+        },
+        {
+          "name": "European Art",
+          "description": "Paintings and artifacts from European collections",
+          "image": "european_art.jpg"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Kangra Museum, Kangra",
+      "city": "Kangra",
+      "state": "Himachal Pradesh",
+      "description": "Repository of Kangra's art, culture, and history",
+      "aboutMuseum": "The Kangra Museum in Kangra celebrates the remarkable artistic heritage of the Kangra Valley, particularly famous for its miniature paintings from the renowned Kangra School of Art. The museum houses delicate paintings, intricate temple sculptures, traditional copper vessels, and ancient coins that chronicle Kangra's long history. This institution preserves the refined aesthetic traditions and folk crafts that have made Kangra a cultural center of Himachal Pradesh.",
+      "museumImage": "../data/kangra city museum.webp",
+      "openingHours": "10:00 AM - 5:00 PM (Closed Tuesdays)",
+      "ticketPrice": "Rs. 20 (Indians), Rs. 100 (Foreigners)",
+      "website": "www.kangramuseum.org",
+      "address": "Kangra 176001",
+      "topExhibits": [
+        {
+          "name": "Kangra School Paintings",
+          "description": "Miniature paintings from the famous Kangra School of Art",
+          "image": "kangra_paintings.jpg"
+        },
+        {
+          "name": "Temple Sculptures",
+          "description": "Stone sculptures from Kangra Valley temples",
+          "image": "temple_sculptures.jpg"
+        },
+        {
+          "name": "Copper Vessels",
+          "description": "Traditional Kangra copper vessels and utensils",
+          "image": "copper_vessels.jpg"
+        },
+        {
+          "name": "Ancient Coins",
+          "description": "Coins from various periods of Kangra's history",
+          "image": "ancient_coins.jpg"
+        },
+        {
+          "name": "Folk Art",
+          "description": "Traditional folk art forms and crafts from Himachal Pradesh",
+          "image": "folk_art.jpg"
+        }
+      ]
+    }
+  ]
+}

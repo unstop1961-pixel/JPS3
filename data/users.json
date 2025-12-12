@@ -1,0 +1,248 @@
+{
+  "gurveer": {
+    "username": "gurveer",
+    "password": "alphabetagamma",
+    "createdAt": "2025-12-12T04:11:49.739Z",
+    "wishlist": [
+      {
+        "museumId": 1,
+        "addedDate": "2025-12-12T04:20:09.617Z"
+      }
+    ],
+    "visitedLog": [
+      {
+        "museumId": 2,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:31:07.334Z"
+      },
+      {
+        "museumId": 1,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:42:26.159Z"
+      },
+      {
+        "museumId": 3,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:45:09.414Z"
+      },
+      {
+        "museumId": 3,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:45:12.223Z"
+      },
+      {
+        "museumId": 4,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:48:08.110Z"
+      },
+      {
+        "museumId": 4,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:49:53.482Z"
+      },
+      {
+        "museumId": 4,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:49:54.602Z"
+      },
+      {
+        "museumId": 4,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:50:06.513Z"
+      },
+      {
+        "museumId": 4,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:50:06.837Z"
+      },
+      {
+        "museumId": 4,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:50:07.196Z"
+      },
+      {
+        "museumId": 4,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T04:50:07.627Z"
+      },
+      {
+        "museumId": 5,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T05:00:44.474Z"
+      },
+      {
+        "museumId": 1,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T05:50:12.244Z"
+      },
+      {
+        "museumId": 1,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T06:24:03.051Z"
+      }
+    ],
+    "reviewDiary": [
+      {
+        "museumId": 2,
+        "rating": 5,
+        "notes": "great visit, never again",
+        "reviewDate": "2025-12-12T04:31:28.982Z"
+      },
+      {
+        "museumId": 1,
+        "rating": 5,
+        "notes": "badiya",
+        "reviewDate": "2025-12-12T04:42:33.045Z"
+      },
+      {
+        "museumId": 4,
+        "rating": 4,
+        "notes": "kinda mid",
+        "reviewDate": "2025-12-12T04:48:16.194Z"
+      }
+    ],
+    "quizScores": [
+      {
+        "score": 7,
+        "totalQuestions": 10,
+        "percentage": "70.00",
+        "answers": [
+          {
+            "questionId": 1,
+            "selectedAnswer": 1,
+            "correctAnswer": 0
+          },
+          {
+            "questionId": 2,
+            "selectedAnswer": 3,
+            "correctAnswer": 1
+          },
+          {
+            "questionId": 3,
+            "selectedAnswer": 0,
+            "correctAnswer": 2
+          },
+          {
+            "questionId": 4,
+            "selectedAnswer": 1,
+            "correctAnswer": 1
+          },
+          {
+            "questionId": 5,
+            "selectedAnswer": 1,
+            "correctAnswer": 1
+          },
+          {
+            "questionId": 6,
+            "selectedAnswer": 0,
+            "correctAnswer": 0
+          },
+          {
+            "questionId": 7,
+            "selectedAnswer": 2,
+            "correctAnswer": 2
+          },
+          {
+            "questionId": 8,
+            "selectedAnswer": 2,
+            "correctAnswer": 2
+          },
+          {
+            "questionId": 9,
+            "selectedAnswer": 1,
+            "correctAnswer": 1
+          },
+          {
+            "questionId": 10,
+            "selectedAnswer": 0,
+            "correctAnswer": 0
+          }
+        ],
+        "attemptDate": "2025-12-12T05:01:27.578Z"
+      },
+      {
+        "museumId": 1,
+        "museumName": "National Museum, Delhi",
+        "score": 0,
+        "totalQuestions": 10,
+        "percentage": "0.00",
+        "answers": [],
+        "attemptDate": "2025-12-12T05:50:15.236Z"
+      }
+    ]
+  },
+  "test1": {
+    "username": "test1",
+    "password": "hello",
+    "createdAt": "2025-12-12T05:05:57.916Z",
+    "wishlist": [],
+    "visitedLog": [
+      {
+        "museumId": 1,
+        "visitDate": "2025-12-12",
+        "timestamp": "2025-12-12T05:06:11.960Z"
+      }
+    ],
+    "reviewDiary": [],
+    "quizScores": [
+      {
+        "score": 2,
+        "totalQuestions": 10,
+        "percentage": "20.00",
+        "answers": [
+          {
+            "questionId": 1,
+            "selectedAnswer": 0,
+            "correctAnswer": 0
+          },
+          {
+            "questionId": 2,
+            "selectedAnswer": 0,
+            "correctAnswer": 2
+          },
+          {
+            "questionId": 3,
+            "selectedAnswer": 0,
+            "correctAnswer": 1
+          },
+          {
+            "questionId": 4,
+            "selectedAnswer": 0,
+            "correctAnswer": 0
+          },
+          {
+            "questionId": 5,
+            "selectedAnswer": 0,
+            "correctAnswer": 1
+          },
+          {
+            "questionId": 6,
+            "selectedAnswer": 0,
+            "correctAnswer": 2
+          },
+          {
+            "questionId": 7,
+            "selectedAnswer": 0,
+            "correctAnswer": 2
+          },
+          {
+            "questionId": 8,
+            "selectedAnswer": 0,
+            "correctAnswer": 2
+          },
+          {
+            "questionId": 9,
+            "selectedAnswer": 0,
+            "correctAnswer": 1
+          },
+          {
+            "questionId": 10,
+            "selectedAnswer": 0,
+            "correctAnswer": 1
+          }
+        ],
+        "attemptDate": "2025-12-12T05:06:41.128Z"
+      }
+    ]
+  }
+}

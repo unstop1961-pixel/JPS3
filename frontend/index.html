@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Museum Guide - Discover India's Cultural Heritage</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">🏛️ Digital Museum Guide</div>
+      <nav>
+        <a href="#" onclick="showPage('home'); return false;" class="user-nav" style="display: none;">Home</a>
+        <a href="#" onclick="showPage('directory'); return false;" class="user-nav" style="display: none;">Museum Directory</a>
+        <a href="#" onclick="currentUser ? (showPage('dashboard'), loadDashboard()) : (showPage('auth')); return false;" class="user-nav" style="display: none;">Dashboard</a>
+      </nav>
+      <div class="auth-buttons"></div>
+    </div>
+  </header>
+
+  <!-- Alerts Container -->
+  <div id="alerts" style="max-width: 1200px; margin: 0 auto; padding: 1rem 2rem;"></div>
+
+  <!-- Home Page -->
+  <div id="home" class="page">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, #8B4513, #D2691E); color: white; padding: 3rem 2rem; border-radius: 8px; text-align: center; margin-bottom: 2rem;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Welcome to Digital Museum Guide</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Discover India's rich cultural heritage and track your journey across thousands of museums</p>
+        <button class="btn btn-secondary" onclick="showPage('directory')" style="padding: 0.8rem 2rem; font-size: 1.1rem;">Explore Museums</button>
+      </div>
+
+      <div class="grid">
+        <div class="card text-center">
+          <h3>🏛️ Museum Directory</h3>
+          <p>Search and explore 16+ Indian museums with detailed information about exhibits, opening hours, and ticket prices.</p>
+          <button class="btn btn-primary" onclick="showPage('directory')">Browse Museums</button>
+        </div>
+        <div class="card text-center">
+          <h3>📋 Track Your Visits</h3>
+          <p>Create a wishlist, log your museum visits, and maintain a personal diary with reviews and ratings.</p>
+          <button class="btn btn-primary" onclick="currentUser ? (showPage('dashboard'), loadDashboard()) : (showPage('auth'))">Go to Dashboard</button>
+        </div>
+      </div>
+
+      <div style="background: white; padding: 2rem; border-radius: 8px; margin-top: 2rem;">
+        <h2 style="color: #8B4513; margin-bottom: 1rem;">About This Application</h2>
+        <p>The Digital Museum Guide is your companion for discovering India's vast cultural treasure. Whether you're a history enthusiast, culture lover, or casual tourist, this portal helps you:</p>
+        <ul style="margin-left: 2rem; line-height: 1.8; color: #666;">
+          <li><strong>Discover Museums:</strong> Access information about 16 major museums across India</li>
+          <li><strong>Plan Your Journey:</strong> Create a wishlist of museums you want to visit</li>
+          <li><strong>Record Memories:</strong> Log your museum visits with dates and personal reviews</li>
+          <li><strong>Share Experiences:</strong> Rate museums and write detailed reviews of your visits</li>
+          <li><strong>Learn & Grow:</strong> Take interactive quizzes about Indian heritage</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Museum Directory Page -->
+  <div id="directory" class="page">
+    <div class="container">
+      <h1 style="color: #8B4513; margin-bottom: 2rem;">Museum Directory</h1>
+
+      <div class="search-container">
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search museums by name, city, or state...">
+          <button id="searchBtn">Search</button>
+        </div>
+      </div>
+
+      <div id="museumGrid" class="grid"></div>
+    </div>
+  </div>
+
+  <!-- Museum Profile Page -->
+  <div id="museum-profile" class="page">
+    <div class="container">
+      <button class="btn btn-secondary" onclick="showPage('directory')">← Back to Directory</button>
+      <div id="museumProfileContainer" style="margin-top: 1.5rem;"></div>
+    </div>
+  </div>
+
+  <!-- Authentication Page -->
+  <div id="auth" class="page active">
+    <div class="container">
+      <div style="max-width: 600px; margin: 0 auto;">
+        <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <div style="display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 2px solid #ddd;">
+            <button id="loginTab" class="btn btn-primary" style="flex: 1; background-color: #8B4513;" onclick="document.getElementById('loginForm').style.display='block'; document.getElementById('signupForm').style.display='none'; this.style.backgroundColor='#8B4513'; document.getElementById('signupTab').style.backgroundColor='#ccc';">Login</button>
+            <button id="signupTab" class="btn" style="flex: 1; background-color: #ccc;" onclick="document.getElementById('loginForm').style.display='none'; document.getElementById('signupForm').style.display='block'; this.style.backgroundColor='#8B4513'; document.getElementById('loginTab').style.backgroundColor='#ccc';">Sign Up</button>
+          </div>
+
+          <!-- Login Form -->
+          <form id="loginForm">
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" id="loginUsername" required>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" id="loginPassword" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="login()" style="width: 100%;">Login</button>
+          </form>
+
+          <!-- Sign Up Form -->
+          <form id="signupForm" style="display: none;">
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" id="signupUsername" required>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" id="signupPassword" required>
+            </div>
+            <div class="form-group">
+              <label>Confirm Password</label>
+              <input type="password" id="signupConfirmPassword" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="signup()" style="width: 100%;">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Page -->
+  <div id="dashboard" class="page">
+    <div class="container">
+      <h1 style="color: #8B4513; margin-bottom: 2rem;">My Cultural Journey</h1>
+
+      <!-- Wishlist Section -->
+      <div class="dashboard-section">
+        <h2>🎯 Wishlist - Museums to Visit</h2>
+        <div id="wishlistContainer"></div>
+      </div>
+
+      <!-- Visited Log Section -->
+      <div class="dashboard-section">
+        <h2>✅ Visited Log - Museums Explored</h2>
+        <div id="visitedContainer"></div>
+      </div>
+
+      <!-- Review Diary Section -->
+      <div class="dashboard-section">
+        <h2>📝 Review Diary - My Experiences</h2>
+        <div id="reviewContainer"></div>
+      </div>
+
+      <!-- Quiz Score History Section -->
+      <div class="dashboard-section">
+        <h2>🎓 Quiz Score History - Knowledge Progress</h2>
+        <div id="scoreHistoryContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Review Form Page -->
+  <div id="review-form" class="page">
+    <div class="container">
+      <div style="max-width: 600px; margin: 0 auto;">
+        <div class="card">
+          <h2>Leave a Review</h2>
+          <form id="reviewForm">
+            <div class="form-group">
+              <label>Rating</label>
+              <div class="star-rating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Your Notes & Experience</label>
+              <textarea id="reviewNotes" placeholder="Share your experience at this museum..." required></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="submitReview()">Submit Review</button>
+            <button type="button" class="btn btn-secondary" onclick="showPage('dashboard')">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quiz Page -->
+  <div id="quiz" class="page">
+    <div class="container">
+      <div class="quiz-container">
+        <h1 style="color: #8B4513; margin-bottom: 2rem; text-align: center;">🎓 Museum Heritage Quiz</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">Select a museum you've visited and test your knowledge with 10 museum-specific questions!</p>
+        <div id="quizContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Digital Museum Guide. Discover India's Cultural Heritage.</p>
+    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Built to help tourists and culture enthusiasts track their journey across Indian museums.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

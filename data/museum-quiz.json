@@ -1,0 +1,829 @@
+{
+  "museumQuizzes": {
+    "1": {
+      "museumName": "National Museum, Delhi",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Which civilization is known for the artifacts displayed in the Harappan section of the National Museum?",
+          "options": ["Indus Valley Civilization", "Vedic Civilization", "Maurya Empire", "Gupta Empire"],
+          "correctAnswer": 0,
+          "explanation": "The Indus Valley Civilization (2600-1900 BCE) is known as the Harappan Civilization, famous for its advanced urban planning and seals."
+        },
+        {
+          "id": 2,
+          "question": "During which period were the South Indian bronze idols created that are displayed in the museum?",
+          "options": ["3rd century BCE", "5th-8th centuries", "9th-13th centuries", "14th-16th centuries"],
+          "correctAnswer": 2,
+          "explanation": "The bronze idols from the Chola and Pandya dynasties were created during the 9th-13th centuries and are masterpieces of Indian art."
+        },
+        {
+          "id": 3,
+          "question": "Who was the most famous emperor of the Maurya Dynasty whose artifacts are displayed in the museum?",
+          "options": ["Chandragupta Maurya", "Ashoka", "Bindusara", "Samprati"],
+          "correctAnswer": 1,
+          "explanation": "Emperor Ashoka (273-232 BCE) is the most famous Maurya emperor, known for his edicts and promotion of Buddhism."
+        },
+        {
+          "id": 4,
+          "question": "The illuminated manuscripts displayed in the Mughal section belong to which era of Indian history?",
+          "options": ["Medieval Period", "Ancient Period", "Modern Period", "Pre-historic Period"],
+          "correctAnswer": 0,
+          "explanation": "The Mughal Empire (1526-1857) represents the Medieval Period of Indian history, known for its cultural and architectural achievements."
+        },
+        {
+          "id": 5,
+          "question": "Which art form is represented by the miniature paintings in the National Museum collection?",
+          "options": ["Large-scale murals", "Detailed miniature paintings", "Stone sculptures", "Bronze castings"],
+          "correctAnswer": 1,
+          "explanation": "Miniature paintings are intricate detailed paintings that depict royal courts, hunting scenes, and religious themes from Mughal and later periods."
+        },
+        {
+          "id": 6,
+          "question": "What is the approximate time span of artifacts covered in the National Museum?",
+          "options": ["1,000 years", "2,000 years", "5,000 years", "10,000 years"],
+          "correctAnswer": 2,
+          "explanation": "The National Museum houses artifacts spanning approximately 5,000 years of Indian history from ancient to modern times."
+        },
+        {
+          "id": 7,
+          "question": "Which dynasty is known for the intricate stone carvings displayed alongside Maurya artifacts?",
+          "options": ["Chola Dynasty", "Pandya Dynasty", "Maurya Dynasty", "Gupta Dynasty"],
+          "correctAnswer": 2,
+          "explanation": "The Maurya Dynasty's intricate stone carvings, especially from Emperor Ashoka's reign, demonstrate advanced craftsmanship."
+        },
+        {
+          "id": 8,
+          "question": "The seals found in the Harappan section are primarily made of which material?",
+          "options": ["Gold", "Silver", "Stone", "Copper"],
+          "correctAnswer": 2,
+          "explanation": "Harappan seals were primarily made of stone and feature undeciphered script, making them valuable for understanding the civilization."
+        },
+        {
+          "id": 9,
+          "question": "Which southern Indian dynasty is famous for creating the bronze idols displayed in the museum?",
+          "options": ["Chera Dynasty", "Chola and Pandya Dynasties", "Pallava Dynasty", "Chalukya Dynasty"],
+          "correctAnswer": 1,
+          "explanation": "The Chola and Pandya dynasties (9th-13th centuries) created exquisite bronze idols that are masterpieces of South Indian art."
+        },
+        {
+          "id": 10,
+          "question": "What is a distinctive feature of Mughal miniature paintings?",
+          "options": ["Use of bright primary colors", "Detailed depictions of royal courts and nature", "Abstract designs", "Geometric patterns"],
+          "correctAnswer": 1,
+          "explanation": "Mughal miniature paintings are known for their detailed depictions of royal courts, hunting scenes, and natural elements with fine brushwork."
+        }
+      ]
+    },
+    "2": {
+      "museumName": "National Rail Museum, Delhi",
+      "questions": [
+        {
+          "id": 1,
+          "question": "In which year did the first railway line open in India?",
+          "options": ["1843", "1853", "1863", "1873"],
+          "correctAnswer": 1,
+          "explanation": "India's first railway line opened on April 16, 1853, between Bombay (Mumbai) and Thane, covering 34 km."
+        },
+        {
+          "id": 2,
+          "question": "Which locomotive is considered the most iconic in Indian railway history?",
+          "options": ["Fairy Queen", "Mountain Lion", "Tiger Express", "Royal Express"],
+          "correctAnswer": 0,
+          "explanation": "Fairy Queen, built in 1855, is the world's oldest working locomotive and is displayed in the National Rail Museum."
+        },
+        {
+          "id": 3,
+          "question": "What was the primary reason for introducing railways in India during British rule?",
+          "options": ["Passenger comfort", "Economic exploitation and resource extraction", "National integration", "Environmental reasons"],
+          "correctAnswer": 1,
+          "explanation": "Railways were introduced primarily to facilitate the extraction of raw materials and transport of British goods for economic profit."
+        },
+        {
+          "id": 4,
+          "question": "How many railway zones were there when Indian Railways were initially organized after independence?",
+          "options": ["6 zones", "9 zones", "12 zones", "15 zones"],
+          "correctAnswer": 1,
+          "explanation": "After independence, Indian Railways were organized into 9 zones to manage different regions of the country efficiently."
+        },
+        {
+          "id": 5,
+          "question": "Which Indian railway is the fastest in terms of train operations?",
+          "options": ["Central Railway", "Western Railway", "Southern Railway", "Northern Railway"],
+          "correctAnswer": 2,
+          "explanation": "Indian Railways operate through multiple zones, with routes connecting all major cities and promoting national integration."
+        },
+        {
+          "id": 6,
+          "question": "What is the gauge used by most Indian railway tracks?",
+          "options": ["Narrow gauge (2 ft)", "Meter gauge (3.28 ft)", "Broad gauge (5.5 ft)", "Standard gauge (4.75 ft)"],
+          "correctAnswer": 2,
+          "explanation": "Most Indian railways use broad gauge (5.5 feet) for better stability and higher speeds on main lines."
+        },
+        {
+          "id": 7,
+          "question": "Who was the key figure in developing the railway network in India during British rule?",
+          "options": ["Lord Curzon", "Lord Dalhousie", "Lord Macaulay", "Lord Wellesley"],
+          "correctAnswer": 1,
+          "explanation": "Lord Dalhousie (1848-1856) was instrumental in promoting railway development in India as a means of economic control."
+        },
+        {
+          "id": 8,
+          "question": "In which city was the National Rail Museum established?",
+          "options": ["Mumbai", "Delhi", "Kolkata", "Chennai"],
+          "correctAnswer": 1,
+          "explanation": "The National Rail Museum is located in Delhi and showcases the history and heritage of Indian railways."
+        },
+        {
+          "id": 9,
+          "question": "What was one of the major challenges faced during the initial railway construction in India?",
+          "options": ["Shortage of wood", "Lack of skilled workers", "Difficult terrain and climate", "All of the above"],
+          "correctAnswer": 3,
+          "explanation": "Railway construction faced multiple challenges including difficult terrain, diverse climates, shortage of materials, and shortage of skilled labor."
+        },
+        {
+          "id": 10,
+          "question": "How many kilometers of railway tracks does the National Rail Museum cover?",
+          "options": ["5 km", "10 km", "15 km", "20 km"],
+          "correctAnswer": 2,
+          "explanation": "The museum's display covers approximately 15 kilometers of museum area with vintage locomotives, coaches, and railway memorabilia."
+        }
+      ]
+    },
+    "3": {
+      "museumName": "Indian Museum, Kolkata",
+      "questions": [
+        {
+          "id": 1,
+          "question": "In which year was the Indian Museum in Kolkata established?",
+          "options": ["1814", "1824", "1834", "1844"],
+          "correctAnswer": 1,
+          "explanation": "The Indian Museum was founded in 1814, making it the oldest and largest museum in India."
+        },
+        {
+          "id": 2,
+          "question": "Which section of the Indian Museum houses the remains of the Buddha?",
+          "options": ["Sculpture Gallery", "Buddhist Section", "Paleontology Section", "Geological Section"],
+          "correctAnswer": 1,
+          "explanation": "The Buddhist Section displays important Buddhist relics and artifacts, including remains connected to Buddha's life and teachings."
+        },
+        {
+          "id": 3,
+          "question": "What is the main focus of the Paleontology section in the Indian Museum?",
+          "options": ["Ancient coins", "Dinosaur fossils", "Mughal weapons", "Medieval manuscripts"],
+          "correctAnswer": 1,
+          "explanation": "The Paleontology section displays fossilized remains of prehistoric animals and plants, showing evolution of life on Earth."
+        },
+        {
+          "id": 4,
+          "question": "Which art form is extensively displayed in the Sculpture Gallery of the Indian Museum?",
+          "options": ["Mughal miniatures", "Indian stone and bronze sculptures", "Modern abstract art", "Contemporary installations"],
+          "correctAnswer": 1,
+          "explanation": "The Sculpture Gallery features an impressive collection of Indian stone and bronze sculptures from various periods and regions."
+        },
+        {
+          "id": 5,
+          "question": "What does the Geological section of the Indian Museum primarily showcase?",
+          "options": ["Ancient pottery", "Mineral and rock formations", "Medieval armor", "Royal jewelry"],
+          "correctAnswer": 1,
+          "explanation": "The Geological section displays minerals, rocks, gems, and meteorites, explaining Earth's geological history."
+        },
+        {
+          "id": 6,
+          "question": "Which emperor's weapons and memorabilia are displayed in the Indian Museum?",
+          "options": ["Akbar", "Ashoka", "Aurangzeb", "Shah Jahan"],
+          "correctAnswer": 0,
+          "explanation": "The museum houses various artifacts and weapons from different rulers, including items connected to Mughal emperors like Akbar."
+        },
+        {
+          "id": 7,
+          "question": "What is unique about the Egyptian mummy displayed in the Indian Museum?",
+          "options": ["It is the oldest mummy in the world", "It was preserved using Indian techniques", "It dates back 2,000 years", "It is made of gold"],
+          "correctAnswer": 2,
+          "explanation": "The Egyptian mummy in the museum dates back approximately 2,000 years and provides insight into ancient Egyptian preservation practices."
+        },
+        {
+          "id": 8,
+          "question": "Which section contains the ancient manuscripts and texts in the Indian Museum?",
+          "options": ["Numismatic Section", "Manuscript Section", "Sculpture Section", "Geological Section"],
+          "correctAnswer": 1,
+          "explanation": "The Manuscript Section preserves and displays ancient texts and manuscripts from various periods of Indian history."
+        },
+        {
+          "id": 9,
+          "question": "What does the Numismatic section of the Indian Museum display?",
+          "options": ["Ancient weapons", "Coins and currency through history", "Religious manuscripts", "Textile artifacts"],
+          "correctAnswer": 1,
+          "explanation": "The Numismatic section exhibits coins, medals, and currency from various periods, showing the economic history of India."
+        },
+        {
+          "id": 10,
+          "question": "In which city is the Indian Museum, one of the oldest museums in Asia, located?",
+          "options": ["Delhi", "Mumbai", "Kolkata", "Bangalore"],
+          "correctAnswer": 2,
+          "explanation": "The Indian Museum is located in Kolkata (formerly Calcutta) and is the oldest and one of the most important museums in Asia."
+        }
+      ]
+    },
+    "4": {
+      "museumName": "Victoria Memorial, Kolkata",
+      "questions": [
+        {
+          "id": 1,
+          "question": "In which year was the Victoria Memorial constructed?",
+          "options": ["1901", "1911", "1921", "1931"],
+          "correctAnswer": 1,
+          "explanation": "The Victoria Memorial was built between 1901-1921 in memory of Queen Victoria and is now a museum dedicated to Calcutta's history."
+        },
+        {
+          "id": 2,
+          "question": "Who designed the Victoria Memorial in Kolkata?",
+          "options": ["Edwin Lutyens", "Herbert Baker", "William Emerson", "Charles Correa"],
+          "correctAnswer": 2,
+          "explanation": "William Emerson, a British architect, designed the Victoria Memorial with Indo-British architectural style."
+        },
+        {
+          "id": 3,
+          "question": "What is the primary architectural style of the Victoria Memorial?",
+          "options": ["Gothic Revival", "Art Deco", "Indo-British", "Modern Minimalist"],
+          "correctAnswer": 2,
+          "explanation": "The Victoria Memorial combines Indian and British architectural elements, representing the Indo-British style of the colonial period."
+        },
+        {
+          "id": 4,
+          "question": "Which famous monument did the design of Victoria Memorial get inspiration from?",
+          "options": ["Taj Mahal", "St. Paul's Cathedral", "Big Ben", "Tower of London"],
+          "correctAnswer": 0,
+          "explanation": "The Victoria Memorial's design was partly inspired by the Taj Mahal, incorporating elements of Mughal architecture with British style."
+        },
+        {
+          "id": 5,
+          "question": "What is the main dome of the Victoria Memorial topped with?",
+          "options": ["A cross", "A star", "A statue of Queen Victoria", "A golden orb"],
+          "correctAnswer": 2,
+          "explanation": "The main dome is topped with a statue of Queen Victoria, the monument's namesake, visible from many parts of the city."
+        },
+        {
+          "id": 6,
+          "question": "How many sculptures are displayed inside the Victoria Memorial museum?",
+          "options": ["Over 20", "Over 50", "Over 100", "Over 200"],
+          "correctAnswer": 2,
+          "explanation": "The Victoria Memorial museum houses over 100 sculptures and artworks depicting Calcutta's history and British colonial period."
+        },
+        {
+          "id": 7,
+          "question": "What gardens surround the Victoria Memorial?",
+          "options": ["Botanical Gardens", "Queen's Gardens", "Victoria Gardens", "Memorial Gardens"],
+          "correctAnswer": 2,
+          "explanation": "The Victoria Memorial is surrounded by Victoria Gardens, designed with fountains, pathways, and beautiful landscaping."
+        },
+        {
+          "id": 8,
+          "question": "Which British monarch's era witnessed the construction of the Victoria Memorial?",
+          "options": ["Queen Victoria", "King Edward VII", "King George V", "King George VI"],
+          "correctAnswer": 1,
+          "explanation": "Although the memorial was for Queen Victoria, it was constructed during King Edward VII's reign (1901-1910)."
+        },
+        {
+          "id": 9,
+          "question": "What material was primarily used in the construction of the Victoria Memorial?",
+          "options": ["Red brick", "White marble", "Granite", "Sandstone"],
+          "correctAnswer": 1,
+          "explanation": "The Victoria Memorial was constructed primarily using white marble, giving it a magnificent and distinctive appearance."
+        },
+        {
+          "id": 10,
+          "question": "How tall is the Victoria Memorial from ground to the top of the dome?",
+          "options": ["50 meters", "70 meters", "90 meters", "110 meters"],
+          "correctAnswer": 2,
+          "explanation": "The Victoria Memorial stands approximately 90 meters tall, making it a prominent landmark visible across Kolkata."
+        }
+      ]
+    },
+    "5": {
+      "museumName": "Government Museum, Chennai",
+      "questions": [
+        {
+          "id": 1,
+          "question": "In which year was the Government Museum in Chennai established?",
+          "options": ["1856", "1866", "1876", "1886"],
+          "correctAnswer": 0,
+          "explanation": "The Government Museum in Chennai was founded in 1856 and is one of the oldest museums in South India."
+        },
+        {
+          "id": 2,
+          "question": "Which art form is the Government Museum in Chennai primarily known for?",
+          "options": ["Mughal miniatures", "Chola bronze sculptures", "Mughal weapons", "Modern art"],
+          "correctAnswer": 1,
+          "explanation": "The museum is famous for its collection of Chola bronze sculptures, which are masterpieces of South Indian art."
+        },
+        {
+          "id": 3,
+          "question": "What period do the bronze sculptures in the Government Museum belong to?",
+          "options": ["Maurya Period", "Gupta Period", "Chola Period", "Mughal Period"],
+          "correctAnswer": 2,
+          "explanation": "The bronze sculptures are from the Chola Period (9th-13th centuries), representing the height of South Indian bronze art."
+        },
+        {
+          "id": 4,
+          "question": "Which section houses ancient Indian coins and currency in the Government Museum?",
+          "options": ["Sculpture Gallery", "Numismatic Section", "Archaeological Section", "Geological Section"],
+          "correctAnswer": 1,
+          "explanation": "The Numismatic Section displays a comprehensive collection of ancient coins, medals, and currency from different periods."
+        },
+        {
+          "id": 5,
+          "question": "What is displayed in the Natural History section of the Government Museum?",
+          "options": ["Royal weapons", "Prehistoric animals and fossils", "Textile samples", "Manuscript collections"],
+          "correctAnswer": 1,
+          "explanation": "The Natural History section displays fossils, preserved specimens of animals, and information about prehistoric life in India."
+        },
+        {
+          "id": 6,
+          "question": "Which dynasty's terracotta figurines are notably displayed in the Government Museum?",
+          "options": ["Maurya Dynasty", "Pandya Dynasty", "Chola Dynasty", "Pallava Dynasty"],
+          "correctAnswer": 0,
+          "explanation": "The museum houses notable terracotta figurines from the Maurya period, demonstrating early artistic traditions."
+        },
+        {
+          "id": 7,
+          "question": "What material are the famous Chola sculptures in the Government Museum made of?",
+          "options": ["Stone", "Terracotta", "Bronze", "Gold"],
+          "correctAnswer": 2,
+          "explanation": "The Chola sculptures are made of bronze, created using the lost-wax casting technique, representing the pinnacle of South Indian artistry."
+        },
+        {
+          "id": 8,
+          "question": "In which city is the Government Museum, famous for Chola bronzes, located?",
+          "options": ["Bangalore", "Hyderabad", "Chennai", "Thiruvananthapuram"],
+          "correctAnswer": 2,
+          "explanation": "The Government Museum is located in Chennai (formerly Madras) and is one of the premier museums in South India."
+        },
+        {
+          "id": 9,
+          "question": "What do the Chola bronzes primarily depict?",
+          "options": ["Battle scenes", "Religious deities and dancing figures", "Royal hunts", "Trade activities"],
+          "correctAnswer": 1,
+          "explanation": "Chola bronzes primarily depict Hindu deities, especially Shiva and other religious figures, often shown in dancing poses like Nataraja."
+        },
+        {
+          "id": 10,
+          "question": "Which famous Chola bronze sculpture is displayed in the Government Museum?",
+          "options": ["Nataraja", "Ganesha statue", "Lion capital", "Buddha statue"],
+          "correctAnswer": 0,
+          "explanation": "The famous Nataraja (Shiva dancing) sculpture from the Chola period is one of the museum's prized possessions, representing Indian art at its finest."
+        }
+      ]
+    },
+    "6": {
+      "museumName": "City Palace Museum, Jaipur",
+      "questions": [
+        {
+          "id": 1,
+          "question": "In which year was the City Palace in Jaipur constructed?",
+          "options": ["1727", "1737", "1747", "1757"],
+          "correctAnswer": 1,
+          "explanation": "The City Palace was constructed in 1737 by Maharaja Sawai Jai Singh II, the founder of Jaipur."
+        },
+        {
+          "id": 2,
+          "question": "Who designed the city of Jaipur and its palace?",
+          "options": ["Maharaja Sawai Jai Singh I", "Maharaja Sawai Jai Singh II", "Vidyadhar Bhattacharya", "Sir Albert Hall"],
+          "correctAnswer": 2,
+          "explanation": "Vidyadhar Bhattacharya, a Bengali architect, designed the city of Jaipur and its palace based on Vastu Shastra and Mughal principles."
+        },
+        {
+          "id": 3,
+          "question": "What is the architectural style of the City Palace?",
+          "options": ["Pure Mughal", "Rajasthani-Mughal fusion", "Gothic", "Indo-British"],
+          "correctAnswer": 1,
+          "explanation": "The City Palace is a stunning blend of Rajasthani and Mughal architecture, reflecting both local and imperial styles."
+        },
+        {
+          "id": 4,
+          "question": "What unique feature characterizes the layout of Jaipur city?",
+          "options": ["Circular design", "Square grid pattern", "Radial design", "Linear design"],
+          "correctAnswer": 1,
+          "explanation": "Jaipur is laid out in a grid pattern divided into nine blocks, following ancient Hindu principles of city planning."
+        },
+        {
+          "id": 5,
+          "question": "Why is Jaipur known as the 'Pink City'?",
+          "options": ["Its soil is pink", "Buildings are painted pink", "Sunsets are pink", "Royal decree"],
+          "correctAnswer": 1,
+          "explanation": "Jaipur buildings were painted pink in 1876 to welcome the Prince of Wales, and this color has been maintained since."
+        },
+        {
+          "id": 6,
+          "question": "Which museum is housed within the City Palace premises?",
+          "options": ["City Palace Museum", "Jaipur Museum", "Royal Museum", "Heritage Museum"],
+          "correctAnswer": 0,
+          "explanation": "The City Palace Museum is located within the palace and displays royal artifacts, weapons, textiles, and manuscripts."
+        },
+        {
+          "id": 7,
+          "question": "What artifacts are primarily displayed in the City Palace Museum?",
+          "options": ["Agricultural tools", "Royal costumes, weapons, and manuscripts", "Industrial machinery", "Scientific instruments"],
+          "correctAnswer": 1,
+          "explanation": "The museum showcases royal costumes, traditional weapons, ancient manuscripts, and artifacts of the royal family."
+        },
+        {
+          "id": 8,
+          "question": "Which astronomical instrument is housed in the City Palace complex?",
+          "options": ["Jantar Mantar", "Observatory", "Planetarium", "Telescope"],
+          "correctAnswer": 0,
+          "explanation": "Jantar Mantar, an astronomical instrument complex built by Maharaja Sawai Jai Singh II, is located adjacent to the City Palace."
+        },
+        {
+          "id": 9,
+          "question": "How many gates does the walled city of Jaipur have?",
+          "options": ["4 gates", "6 gates", "7 gates", "9 gates"],
+          "correctAnswer": 2,
+          "explanation": "The walled city of Jaipur has 7 gates, connecting it to surrounding areas and maintaining the traditional city boundary."
+        },
+        {
+          "id": 10,
+          "question": "What is the significance of the seven-block layout in Jaipur's city plan?",
+          "options": ["Military organization", "Seven Hindu principles", "Seven directions", "Seven castes"],
+          "correctAnswer": 1,
+          "explanation": "The seven-block layout is based on Hindu principles of city planning as mentioned in ancient Indian texts like Shilpa Shastras."
+        }
+      ]
+    },
+    "7": {
+      "museumName": "Rajasthan Museum, Jaipur",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the primary focus of the Rajasthan Museum?",
+          "options": ["Royal weapons only", "Local history, culture, and heritage", "Modern art", "Industrial development"],
+          "correctAnswer": 1,
+          "explanation": "The Rajasthan Museum focuses on preserving and displaying the rich cultural heritage, history, and traditions of Rajasthan."
+        },
+        {
+          "id": 2,
+          "question": "Which art form is extensively represented in the Rajasthan Museum?",
+          "options": ["Mughal miniatures", "Rajasthani folk art and textiles", "Modern sculptures", "Abstract paintings"],
+          "correctAnswer": 1,
+          "explanation": "Rajasthani folk art, traditional textiles, and crafts are prominently displayed, showcasing the region's artistic heritage."
+        },
+        {
+          "id": 3,
+          "question": "What types of weapons are displayed in the Rajasthan Museum?",
+          "options": ["Medieval swords and armor", "Modern weapons", "Hunting tools only", "Religious artifacts"],
+          "correctAnswer": 0,
+          "explanation": "The museum displays an impressive collection of medieval weapons, including swords, shields, and armor used by Rajasthani warriors."
+        },
+        {
+          "id": 4,
+          "question": "Which section of the Rajasthan Museum features traditional costumes?",
+          "options": ["Textile Gallery", "Clothing Museum", "Heritage Section", "Culture Wing"],
+          "correctAnswer": 0,
+          "explanation": "The Textile Gallery showcases traditional Rajasthani clothing, embroidery, and textile arts from different regions of Rajasthan."
+        },
+        {
+          "id": 5,
+          "question": "What can be learned from the crafts section of the Rajasthan Museum?",
+          "options": ["Modern manufacturing", "Traditional handicraft techniques", "Industrial processes", "Agricultural methods"],
+          "correctAnswer": 1,
+          "explanation": "The crafts section demonstrates traditional handicraft techniques like pottery, weaving, and metalwork practiced in Rajasthan."
+        },
+        {
+          "id": 6,
+          "question": "Which precious item is displayed in the jewelry section of the Rajasthan Museum?",
+          "options": ["Modern diamond jewelry", "Traditional Rajasthani gold and silver ornaments", "Costume jewelry", "Plastic decorations"],
+          "correctAnswer": 1,
+          "explanation": "The jewelry section features traditional gold and silver ornaments that reflect the wealth and craftsmanship of Rajasthani artisans."
+        },
+        {
+          "id": 7,
+          "question": "What do the manuscripts in the Rajasthan Museum depict?",
+          "options": ["Religious texts and royal chronicles", "Scientific formulas", "Trade records", "Agricultural practices"],
+          "correctAnswer": 0,
+          "explanation": "The manuscripts include religious texts, royal chronicles, and literary works that document Rajasthan's history and culture."
+        },
+        {
+          "id": 8,
+          "question": "Which musical instruments are displayed in the Rajasthan Museum?",
+          "options": ["European classical instruments", "Traditional Rajasthani folk instruments", "Modern electronic instruments", "Asian instruments only"],
+          "correctAnswer": 1,
+          "explanation": "Traditional folk instruments like the sitar, sarangi, and various percussion instruments used in Rajasthani music are displayed."
+        },
+        {
+          "id": 9,
+          "question": "What do the folk traditions section of the Rajasthan Museum showcase?",
+          "options": ["Western traditions", "Seasonal festivals, celebrations, and rituals", "Urban culture", "Foreign customs"],
+          "correctAnswer": 1,
+          "explanation": "The section displays information about seasonal festivals, celebrations, rituals, and customs unique to Rajasthan."
+        },
+        {
+          "id": 10,
+          "question": "How does the Rajasthan Museum contribute to cultural preservation?",
+          "options": ["By selling artifacts", "By documenting and displaying traditional heritage", "By promoting Western culture", "By ignoring local traditions"],
+          "correctAnswer": 1,
+          "explanation": "The museum plays a crucial role in preserving and promoting traditional Rajasthani culture for future generations."
+        }
+      ]
+    },
+    "8": {
+      "museumName": "Salarjung Museum, Hyderabad",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Who was the founder of the Salarjung Museum?",
+          "options": ["Nizam of Hyderabad", "Salarjung I", "Salarjung III", "British Governor"],
+          "correctAnswer": 2,
+          "explanation": "Osman Ali Khan, also known as Mir Osman Ali Khan or the 7th Nizam, established the Salarjung Museum for public display."
+        },
+        {
+          "id": 2,
+          "question": "What is the Salarjung Museum primarily known for?",
+          "options": ["Ancient pottery", "Diverse art and artifacts collection", "Medieval weapons only", "Modern sculptures"],
+          "correctAnswer": 1,
+          "explanation": "The Salarjung Museum is famous for its vast and diverse collection of art, manuscripts, sculptures, and artifacts from around the world."
+        },
+        {
+          "id": 3,
+          "question": "From which regions are the artifacts in the Salarjung Museum primarily sourced?",
+          "options": ["Europe only", "Asia only", "Asia, Europe, and the Middle East", "Americas"],
+          "correctAnswer": 2,
+          "explanation": "The museum houses artifacts from diverse regions including Asia, Europe, and the Middle East, reflecting international art and culture."
+        },
+        {
+          "id": 4,
+          "question": "What significant collection is housed in the Salarjung Museum?",
+          "options": ["Modern paintings", "Mughal manuscripts and miniature paintings", "Contemporary sculptures", "Digital art"],
+          "correctAnswer": 1,
+          "explanation": "The museum has an impressive collection of Mughal manuscripts and miniature paintings depicting various themes and periods."
+        },
+        {
+          "id": 5,
+          "question": "Which type of carpets is displayed in the Salarjung Museum?",
+          "options": ["Modern synthetic carpets", "Persian and Middle Eastern carpets", "Indian cotton rugs", "Wool blankets"],
+          "correctAnswer": 1,
+          "explanation": "The museum displays beautiful Persian and Middle Eastern carpets, showcasing intricate patterns and craftsmanship from these regions."
+        },
+        {
+          "id": 6,
+          "question": "What is unique about the marble sculptures in the Salarjung Museum?",
+          "options": ["They are all Indian", "They include works from various European and Asian artists", "They are all modern", "They are all religious"],
+          "correctAnswer": 1,
+          "explanation": "The marble sculptures collection includes masterpieces from various European and Asian artists, representing different artistic traditions."
+        },
+        {
+          "id": 7,
+          "question": "Which section contains ancient Indian scripts and texts in the Salarjung Museum?",
+          "options": ["Sculpture Section", "Manuscript Section", "Carpet Section", "Marble Section"],
+          "correctAnswer": 1,
+          "explanation": "The Manuscript Section preserves ancient Indian scripts, manuscripts, and texts, offering insights into India's literary heritage."
+        },
+        {
+          "id": 8,
+          "question": "What metal statues and sculptures are particularly noted in the Salarjung Museum?",
+          "options": ["Iron sculptures only", "Bronze sculptures and idols", "Copper decorations", "Silver figurines"],
+          "correctAnswer": 1,
+          "explanation": "The museum displays exquisite bronze sculptures and idols, including temple idols and decorative pieces from different periods."
+        },
+        {
+          "id": 9,
+          "question": "Which historical artifacts related to the Nizam's court are preserved here?",
+          "options": ["Swords and armor only", "Royal costumes, jewelry, and personal items", "Kitchen utensils", "Agricultural tools"],
+          "correctAnswer": 1,
+          "explanation": "The museum preserves royal costumes, jewelry, weapons, and personal items belonging to the Nizam's court and family."
+        },
+        {
+          "id": 10,
+          "question": "How many artifacts are approximately housed in the Salarjung Museum?",
+          "options": ["About 5,000", "About 10,000", "About 43,000", "About 100,000"],
+          "correctAnswer": 2,
+          "explanation": "The Salarjung Museum houses approximately 43,000 artifacts, making it one of the largest single-owner collections in the world."
+        }
+      ]
+    },
+    "9": {
+      "museumName": "Prince of Wales Museum, Mumbai",
+      "questions": [
+        {
+          "id": 1,
+          "question": "In which year was the Prince of Wales Museum (now Chhatrapati Shivaji Maharaj Vastu Sangrahalaya) founded?",
+          "options": ["1905", "1915", "1925", "1935"],
+          "correctAnswer": 0,
+          "explanation": "The museum was founded in 1905 and now operates under the name Chhatrapati Shivaji Maharaj Vastu Sangrahalaya (CSMVS)."
+        },
+        {
+          "id": 2,
+          "question": "Who was the museum built to honor?",
+          "options": ["King George V", "Prince of Wales", "Queen Victoria", "Lord Curzon"],
+          "correctAnswer": 1,
+          "explanation": "The museum was built to commemorate the visit of the Prince of Wales (later King George V) to India in 1905."
+        },
+        {
+          "id": 3,
+          "question": "What architectural style does the museum building represent?",
+          "options": ["Victorian Gothic", "Indo-Saracenic", "Art Deco", "Mughal"],
+          "correctAnswer": 1,
+          "explanation": "The museum building is an outstanding example of Indo-Saracenic architecture, blending Indian and European design elements."
+        },
+        {
+          "id": 4,
+          "question": "What is one of the main sections of the Prince of Wales Museum?",
+          "options": ["Automobile Gallery", "Indian Art Gallery", "Food Court", "Shopping Complex"],
+          "correctAnswer": 1,
+          "explanation": "The Indian Art Gallery houses sculptures, paintings, and decorative arts from different periods of Indian history."
+        },
+        {
+          "id": 5,
+          "question": "Which period of Indian art is extensively displayed in the museum?",
+          "options": ["Modern art only", "Ancient to contemporary Indian art", "Western art only", "Contemporary sculptures"],
+          "correctAnswer": 1,
+          "explanation": "The museum displays Indian art spanning from ancient periods to contemporary times, showcasing the evolution of Indian artistic traditions."
+        },
+        {
+          "id": 6,
+          "question": "What type of weapons collection is housed in the museum?",
+          "options": ["Modern firearms only", "Ancient and medieval Indian weapons", "European swords", "Toy weapons"],
+          "correctAnswer": 1,
+          "explanation": "The museum has a significant collection of ancient and medieval Indian weapons including swords, armor, and ceremonial weapons."
+        },
+        {
+          "id": 7,
+          "question": "Which section displays textiles and decorative arts in the Prince of Wales Museum?",
+          "options": ["Weapon Gallery", "Textile and Decorative Arts Gallery", "Natural History", "Geology Section"],
+          "correctAnswer": 1,
+          "explanation": "The Textile and Decorative Arts Gallery showcases traditional textiles, embroidery, and decorative pieces from various regions of India."
+        },
+        {
+          "id": 8,
+          "question": "What is displayed in the Natural History section of the museum?",
+          "options": ["Historical documents", "Dinosaur fossils and animal specimens", "Royal artifacts", "Medieval manuscripts"],
+          "correctAnswer": 1,
+          "explanation": "The Natural History section displays fossils, preserved specimens of animals, and information about prehistoric life."
+        },
+        {
+          "id": 9,
+          "question": "Which coins and currency are displayed in the museum's Numismatic collection?",
+          "options": ["Only modern currency", "Ancient Indian coins and currency through ages", "Foreign coins only", "Medieval coins only"],
+          "correctAnswer": 1,
+          "explanation": "The Numismatic collection displays coins, medals, and currency from various periods of Indian history, showing economic evolution."
+        },
+        {
+          "id": 10,
+          "question": "In which city is the Prince of Wales Museum (CSMVS) located?",
+          "options": ["Delhi", "Kolkata", "Mumbai", "Bangalore"],
+          "correctAnswer": 2,
+          "explanation": "The Chhatrapati Shivaji Maharaj Vastu Sangrahalaya is located in Mumbai and is one of the premier museums in India."
+        }
+      ]
+    },
+    "10": {
+      "museumName": "Albert Hall Museum, Jaipur",
+      "questions": [
+        {
+          "id": 1,
+          "question": "In which year was the Albert Hall Museum in Jaipur established?",
+          "options": ["1876", "1886", "1896", "1906"],
+          "correctAnswer": 2,
+          "explanation": "The Albert Hall Museum was established in 1896 and is the oldest museum in Jaipur."
+        },
+        {
+          "id": 2,
+          "question": "Who was the Albert Hall Museum named after?",
+          "options": ["Prince Albert", "King Albert I", "Albert Einstein", "Albert Hall (architect)"],
+          "correctAnswer": 0,
+          "explanation": "The museum was named after Prince Albert, and its architecture reflects Victorian-era design principles."
+        },
+        {
+          "id": 3,
+          "question": "What is the architectural style of the Albert Hall Museum building?",
+          "options": ["Pure Mughal", "Gothic Revival", "Indo-British fusion", "Modernist"],
+          "correctAnswer": 2,
+          "explanation": "The building combines Indian and British architectural styles, reflecting the colonial period's aesthetic preferences."
+        },
+        {
+          "id": 4,
+          "question": "Which art form is the Albert Hall Museum primarily focused on?",
+          "options": ["Modern sculptures", "Indian decorative arts and artifacts", "Modern paintings", "Contemporary installations"],
+          "correctAnswer": 1,
+          "explanation": "The museum focuses on Indian decorative arts, including sculptures, paintings, textiles, and traditional crafts from Rajasthan."
+        },
+        {
+          "id": 5,
+          "question": "What types of artifacts are displayed in the Albert Hall Museum?",
+          "options": ["Medieval weapons only", "Paintings, sculptures, textiles, and decorative items", "Modern machinery", "Scientific instruments"],
+          "correctAnswer": 1,
+          "explanation": "The museum displays a diverse collection including paintings, sculptures, textiles, pottery, and other decorative artifacts."
+        },
+        {
+          "id": 6,
+          "question": "Which section contains traditional Rajasthani clothing in the Albert Hall Museum?",
+          "options": ["Textile Gallery", "Fashion Section", "Clothing Museum", "Heritage Wing"],
+          "correctAnswer": 0,
+          "explanation": "The Textile Gallery displays traditional Rajasthani clothing, embroidery work, and textile arts from different communities."
+        },
+        {
+          "id": 7,
+          "question": "What do the terracotta figurines in the Albert Hall Museum represent?",
+          "options": ["Modern art", "Traditional folk crafts and customs", "Industrial products", "Religious monuments"],
+          "correctAnswer": 1,
+          "explanation": "The terracotta figurines represent traditional folk crafts and showcase the daily life and customs of Rajasthani people."
+        },
+        {
+          "id": 8,
+          "question": "Which manuscripts are preserved in the Albert Hall Museum?",
+          "options": ["European manuscripts", "Indian manuscripts and royal chronicles", "Scientific texts only", "Agricultural documents"],
+          "correctAnswer": 1,
+          "explanation": "The museum preserves Indian manuscripts, royal chronicles, and literary works that document Rajasthan's cultural history."
+        },
+        {
+          "id": 9,
+          "question": "What jewelry items are displayed in the Albert Hall Museum?",
+          "options": ["Modern diamond jewelry", "Traditional gold and silver ornaments", "Costume jewelry only", "Plastic decorations"],
+          "correctAnswer": 1,
+          "explanation": "The jewelry section features traditional gold and silver ornaments that reflect the wealth and artistic skill of Rajasthani craftsmen."
+        },
+        {
+          "id": 10,
+          "question": "How does the Albert Hall Museum contribute to preserving Rajasthani heritage?",
+          "options": ["By selling artifacts", "By documenting and displaying traditional art and culture", "By promoting modern art only", "By ignoring local traditions"],
+          "correctAnswer": 1,
+          "explanation": "The museum plays an important role in preserving and promoting traditional Rajasthani art, culture, and heritage for future generations."
+        }
+      ]
+    },
+    "11": {
+      "museumName": "National Museum, Kolkata",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the primary purpose of the National Museum in Kolkata?",
+          "options": ["Weapon storage", "Preserving Bengal's cultural heritage", "Modern art promotion", "Industrial exhibition"],
+          "correctAnswer": 1,
+          "explanation": "The National Museum in Kolkata is dedicated to preserving and showcasing Bengal's rich cultural, historical, and artistic heritage."
+        },
+        {
+          "id": 2,
+          "question": "Which art form is extensively represented in the National Museum, Kolkata?",
+          "options": ["Mughal miniatures", "Bengal School of Art paintings", "Modern sculptures", "Contemporary installations"],
+          "correctAnswer": 1,
+          "explanation": "The museum prominently features works from the Bengal School of Art, which revolutionized Indian art in the early 20th century."
+        },
+        {
+          "id": 3,
+          "question": "Who were prominent artists of the Bengal School of Art?",
+          "options": ["Only Rabindranath Tagore", "Abanindranath Tagore, Nandalal Bose, and others", "European artists", "Contemporary Indian artists"],
+          "correctAnswer": 1,
+          "explanation": "The Bengal School included artists like Abanindranath Tagore, Nandalal Bose, and Ramkinkar Baij, who defined modern Indian art."
+        },
+        {
+          "id": 4,
+          "question": "What historical artifacts related to the Indian independence movement are displayed?",
+          "options": ["English documents only", "Manuscripts, photographs, and artifacts from freedom fighters", "Weapons collection", "Royal jewelry"],
+          "correctAnswer": 1,
+          "explanation": "The museum preserves important artifacts, manuscripts, and photographs related to Bengal's crucial role in the independence movement."
+        },
+        {
+          "id": 5,
+          "question": "Which sculpture section is notable in the National Museum, Kolkata?",
+          "options": ["European sculptures only", "Indian stone and bronze sculptures from various periods", "Modern abstract sculptures", "Marble sculptures"],
+          "correctAnswer": 1,
+          "explanation": "The sculpture section features Indian stone and bronze sculptures from different historical periods, showcasing artistic evolution."
+        },
+        {
+          "id": 6,
+          "question": "What type of musical instruments are displayed in the museum?",
+          "options": ["Western instruments only", "Traditional Indian classical and folk instruments", "Modern electronic instruments", "Asian instruments only"],
+          "correctAnswer": 1,
+          "explanation": "The museum displays traditional Indian classical instruments like sitar, sarod, and various percussion instruments used in Indian music."
+        },
+        {
+          "id": 7,
+          "question": "Which decorative arts are showcased in the National Museum, Kolkata?",
+          "options": ["European decorative arts only", "Indian textiles, pottery, and decorative items", "Modern design objects", "Industrial products"],
+          "correctAnswer": 1,
+          "explanation": "The museum displays Indian decorative arts including textiles, pottery, ceramics, and traditional craftwork from Bengal."
+        },
+        {
+          "id": 8,
+          "question": "What manuscripts and documents are preserved in the museum?",
+          "options": ["Foreign manuscripts only", "Bengal's literary and historical manuscripts", "Scientific texts only", "Religious documents"],
+          "correctAnswer": 1,
+          "explanation": "The museum preserves important manuscripts and documents that document Bengal's intellectual, literary, and historical contributions."
+        },
+        {
+          "id": 9,
+          "question": "How does the National Museum, Kolkata, reflect Bengal's cultural identity?",
+          "options": ["Through Western art only", "By showcasing Bengal's unique artistic, literary, and cultural traditions", "By ignoring local heritage", "By focusing on industrial development"],
+          "correctAnswer": 1,
+          "explanation": "The museum comprehensively represents Bengal's distinct cultural identity through its art, literature, history, and traditions."
+        },
+        {
+          "id": 10,
+          "question": "What role did Bengal play in India's cultural renaissance?",
+          "options": ["No significant role", "Led the modern cultural and intellectual renaissance of India", "Only political role", "Industrial development only"],
+          "correctAnswer": 1,
+          "explanation": "Bengal was the epicenter of India's cultural and intellectual renaissance in the 19th and early 20th centuries, influencing the entire nation."
+        }
+      ]
+    }
+  }
+}
